@@ -1,75 +1,112 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<!-- Page Content -->
+<div class="container">
 
-
-<%= form_tag("/index", method: "post") do %>
-  <div>
-    <%= "Fra:" %>
-    <%= label_tag("Fjerdingen") %>
-    <%= radio_button_tag("fra", "fjerdingen", checked = false) %>
-    <%= label_tag("Vulkan") %>
-    <%= radio_button_tag("fra", "vulkan" ,  checked = false) %>
-    <%= label_tag("Brennerivegen") %>
-    <%= radio_button_tag("fra", "brennerivegen" ,  checked = false) %>
-  </div>
-  <div>  
-    <%= "Til:" %>
-    <%= label_tag("Fjerdingen") %>
-    <%= radio_button_tag("til", "fjerdingen", checked = false) %> 
-    <%= label_tag("Vulkan") %>
-    <%= radio_button_tag("til", "vulkan", checked = false) %>
-    <%= label_tag("Brennerivegen") %>
-    <%= radio_button_tag("til", "brennerivegen" ,  checked = false) %>
-    <%= submit_tag("Finn")%>
+  <div id="map-container">
+    <div id="map-canvas"></div>
   </div>
 
-<% end %> 
-<%= @fra %>
-<%= @til %>
-<% if @fra == "vulkan" and @til == "fjerdingen" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+  <div class="row">
+    <div class="col-md-6">
+      <% if @fra == "vulkan" and @til == "fjerdingen" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit"
+                width="600"
+                height="450"
+                frameborder="0"
+                allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
 
-<% if @fra == "vulkan" and @til == "brennerivegen" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+      <% if @fra == "vulkan" and @til == "brennerivegen" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
 
-<% if @fra == "fjerdingen" and @til == "vulkan" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+      <% if @fra == "fjerdingen" and @til == "vulkan" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
 
-<% if @fra == "fjerdingen" and @til == "brennerivegen" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+      <% if @fra == "fjerdingen" and @til == "brennerivegen" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
 
-<% if @fra == "brennerivegen" and @til == "fjerdingen" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+      <% if @fra == "brennerivegen" and @til == "fjerdingen" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
 
-<% if @fra == "brennerivegen" and @til == "vulkan" %>
-    <iframe style="border: 0;" 
-    src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-    </iframe>
-<% end %>
+      <% if @fra == "brennerivegen" and @til == "vulkan" %>
+        <iframe style="border: 0;"
+                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        </iframe>
+      <% end %>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-3">
+      <%= form_tag("/index", method: "post") do %>
+        <div class="align-content-md-start">
+          <%= "Fra:" %>
+          <div class="row">
+            <%= label_tag("Fjerdingen") %>
+            <%= radio_button_tag("fra", "fjerdingen", checked = false) %>
+          </div>
+          <div class="row">
+            <%= label_tag("Vulkan") %>
+            <%= radio_button_tag("fra", "vulkan", checked = false) %>
+          </div>
+          <div class="row">
+            <%= label_tag("Brennerivegen") %>
+            <%= radio_button_tag("fra", "brennerivegen", checked = false) %>
+          </div>
+        </div>
+        <div class="align-content-md-start">
+          <%= "Til:" %>
+          <div class="row">
+            <%= label_tag("Fjerdingen") %>
+            <%= radio_button_tag("til", "fjerdingen", checked = false) %>
+          </div>
+          <div class="row">
+            <%= label_tag("Vulkan") %>
+            <%= radio_button_tag("til", "vulkan", checked = false) %>
+          </div>
+          <div class="row">
+            <%= label_tag("Brennerivegen") %>
+            <%= radio_button_tag("til", "brennerivegen", checked = false) %>
+          </div>
+        </div>
+        <div class="row btn">
+          <%= submit_tag("Finn") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Footer -->
+<footer class="py-5 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+  </div>
+  <!-- /.container -->
+
+</footer>
