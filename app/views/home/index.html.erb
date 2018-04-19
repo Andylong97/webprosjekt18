@@ -1,66 +1,24 @@
 <!-- Page Content -->
 <div class="container">
 
-  <div id="map-container">
-    <div id="map-canvas"></div>
-  </div>
-
+  <!-- Jumbotron Header -->
+  <header class="jumbotron my-4">
+    <h1 class="display-3">Studentveiviseren</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt
+      possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam
+      repellat.</p>
+    <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
+  </header>
   <div class="row">
     <div class="col-md-6">
-      <% if @fra == "vulkan" and @til == "fjerdingen" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit"
-                width="600"
-                height="450"
-                frameborder="0"
-                allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
-
-      <% if @fra == "vulkan" and @til == "brennerivegen" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
-
-      <% if @fra == "fjerdingen" and @til == "vulkan" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
-
-      <% if @fra == "fjerdingen" and @til == "brennerivegen" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=Brenneriveien+9,+Oslo &amp;origin=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
-
-      <% if @fra == "brennerivegen" and @til == "fjerdingen" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
-
-      <% if @fra == "brennerivegen" and @til == "vulkan" %>
-        <iframe style="border: 0;"
-                src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;origin=Brenneriveien+9,+Oslo &amp;destination=vulkan+oslo &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-          <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
-        </iframe>
-      <% end %>
+      <iframe style="border: 0;"
+              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=<%= @til %>> &amp;origin=<%= @fra %>> &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">
+        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>
+      </iframe>
     </div>
-    <div class="col-md-3"></div>
-    <div class="col-md-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-5">
       <%= form_tag("/index", method: "post") do %>
         <div class="align-content-md-start">
           <%= "Fra:" %>
@@ -105,7 +63,7 @@
 <!-- Footer -->
 <footer class="py-5 bg-dark">
   <div class="container">
-    <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+    <p class="m-0 text-center text-white">Copyright &copy; Webprosjekt 2018</p>
   </div>
   <!-- /.container -->
 
