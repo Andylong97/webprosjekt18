@@ -1,4 +1,4 @@
-version: '2.0'
+version: '3'
 
 services:
   web:
@@ -15,7 +15,7 @@ services:
     image: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: "example"
 
   adminer:
     image: adminer
