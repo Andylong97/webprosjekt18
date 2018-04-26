@@ -10,5 +10,6 @@ class HomeController < ApplicationController
     maps = ::GoogleMaps.new(params)
     @fra = maps.origin
     @til = maps.destination
+    @from = %w[fjerdingen vulkan kvadraturen brennerivegen]
   end
 end

@@ -11,6 +11,10 @@ class GoogleMaps
     translate_travel(@travel[:til])
   end
 
+  def places
+
+  end
+
   private
 
   def translate_travel(travel)
