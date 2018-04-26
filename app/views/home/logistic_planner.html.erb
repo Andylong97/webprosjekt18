@@ -11,28 +11,28 @@
       <div class="col-md-2"></div>
       <div class="col-lg-8">
         <div class="row">
-          <div class="col-lg-1">
-            <button class="dropdown btn-dark" type="button" data-toggle="collapse" data-target="#from" aria-expanded="false">
-              Reis fra
-            </button>
-            <div class="btn-dark col-md-1 collapse" id="from">
-              <% @from.each do |from| %>
-                <button onclick="">
-                  <%= from %>
-                </button>
+          <div class="col-lg-2">
+            <select class="btn-dark" onchange="calculateRoute(); ruterTravel();" id="from">
+              <% @campus.each do |from| %>
+                <option value="<%= from.address %>"><%= from.name %></option>
               <% end %>
-            </div>
+            </select>
           </div>
-          <button class="dropdown-toggle" type="button" data-toggle="collapse" data-target="from" aria-expanded="false">
-            Reis til
-          </button>
+          <select class="btn-dark" onchange="calculateRoute(); ruterTravel();" id="to">
+            <% @campus.each do |to| %>
+              <option value="<%= to.address %>"><%= to.name %></option>
+            <% end %>
+          </select>
         </div>
         <div class="row">
           <div class="col-lg-8">
-            <div id="map" onload="initMap()"></div>
+            <div id="map" onload="initMap(59.916303, 10.760242, 13)"></div>
           </div>
           <div class="col-lg-4"></div>
         </div>
       </div>
-      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <p id="ruter">
+        </p>
+      </div>
     </div>
