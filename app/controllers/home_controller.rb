@@ -9,8 +9,7 @@ class HomeController < ApplicationController
     @fra = maps.origin
     @til = maps.destination
     @campus = Location.all
-    travel = maps.places
-    raise travel.inspect
+    @travel = maps.places
   end
 
   def brenneriveien

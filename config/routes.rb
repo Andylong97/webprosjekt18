@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   post '/fjerdingen', to: 'home#fjerdingen'
 
-  get '/kvardaturen', to: 'home#kvardaturen'
+  get '/kvadraturen', to: 'home#kvadraturen'
 
   post '/kvadraturen', to: 'home#kvadraturen'
 

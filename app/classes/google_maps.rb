@@ -12,9 +12,15 @@ class GoogleMaps
   end
 
   def places
-    uri = URI('http://reisapi.ruter.no/Travel/GetTravels?fromPlace=3010011&toPlace=3010012&isafter=true')
+    uri = URI('http://reisapi.ruter.no/Travel/GetTravels?fromPlace=3010512&toPlace=3010513&isafter=true')
     result = Net::HTTP.get_response(uri)
-    travel = JSON.parse(result.body)
+          JSON.parse(result.body)
+  end
+
+  def stops
+    stopURI = URI('http://reisapi.ruter.no/Place/GetStopsRuter')
+    stops = Net::HTTP.get_response(stopURI)
+    stop = JSON.parse(stops.body)
   end
 
   private

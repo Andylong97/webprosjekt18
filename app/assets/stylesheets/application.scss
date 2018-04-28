@@ -21,7 +21,7 @@
 }
 
 #map {
-  height: 30em;
+  height: 100%;
 }
 
 html, body {
@@ -29,4 +29,13 @@ html, body {
   width: 100%;
   margin: 0;
   padding-top: 54px;
+}
+
+//::-webkit-scrollbar {
+//  display: none;
+//}
+
+#routeInfo {
+  overflow: scroll;
+  height: 100%;
 }
