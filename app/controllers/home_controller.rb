@@ -8,7 +8,9 @@ class HomeController < ApplicationController
     maps = ::GoogleMaps.new(params)
     @fra = maps.origin
     @til = maps.destination
-    @from = %w[fjerdingen vulkan kvadraturen brennerivegen]
+    @campus = Location.all
+    travel = maps.places
+    raise travel.inspect
   end
 
   def brenneriveien
