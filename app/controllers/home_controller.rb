@@ -12,4 +12,20 @@ class HomeController < ApplicationController
     @til = maps.destination
     @from = %w[fjerdingen vulkan kvadraturen brennerivegen]
   end
+
+  def brenneriveien
+
+  end
+
+  def fjerdingen
+
+  end
+
+  def kvadraturen
+
+  end
+
+  def vulkan
+
+  end
 end

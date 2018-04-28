@@ -4,6 +4,22 @@ Rails.application.routes.draw do
 
   post '/index', to: 'home#index'
 
+  get '/brenneriveien', to: 'home#brenneriveien'
+
+  post '/brenneriveien', to: 'home#brenneriveien'
+
+  get '/fjerdingen', to: 'home#fjerdingen'
+
+  post '/fjerdingen', to: 'home#fjerdingen'
+
+  get '/kvardaturen', to: 'home#kvardaturen'
+
+  post '/kvadraturen', to: 'home#kvadraturen'
+
+  get '/vulkan', to: 'home#vulkan'
+
+  post '/vulkan', to: 'home#vulkan'
+
   get '/logistics', to: 'home#logistic_planner'
 
   post '/logistics', to: 'home#logistic_planner'
