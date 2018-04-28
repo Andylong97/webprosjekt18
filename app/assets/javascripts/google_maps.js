@@ -50,10 +50,9 @@ function ruterTravel() {
     let origin = document.getElementById('from').value;
     let destination = document.getElementById('to').value;
     let xhttp = new XMLHttpRequest();
-    let url = 'http://reisapi.ruter.no/Travel/GetTravels?fromPlace=3010011&toPlace=3010011&isafter=true&time=' + new Date();
+    let url = 'http://reisapi.ruter.no/Travel/GetTravels?fromPlace=3010011&toPlace=3010011&isafter=true';
     xhttp.open("GET", url, true);
     xhttp.setRequestHeader("Content-type", "application/json");
     xhttp.send();
     let response = JSON.parse(xhttp.responseText);
-    console.log(response);
 }
