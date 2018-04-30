@@ -13,6 +13,9 @@ class HomeController < ApplicationController
   end
 
   def route_info
+    maps = ::GoogleMaps.new(params)
+    @travel = maps.places
+    @result = 'Hello this is working'
     render partial: 'home/route_info'
   end
 
