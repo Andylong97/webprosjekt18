@@ -23,13 +23,19 @@
               <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="/logistics">Studentveiviser</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="/fjerdingen">Fjerdingen</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="/vulkan">Vulkan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/brenneriveien">Brenneriveien</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/kvadraturen">Kvadraturen</a>
             </li>
           </ul>
         </div>
@@ -38,7 +44,7 @@
     <div class="container-fluid" style="height: 100%">
         <%= yield %>
     </div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=initMap"
-          async def er></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=calculateRoute"
+          async defer></script>
   </body>
 </html>

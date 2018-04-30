@@ -11,8 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  */
-@import "css/*";
 @import "home";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @media (min-width: 992px) {
   body {
@@ -21,7 +23,7 @@
 }
 
 #map {
-  height: 30em;
+  height: 100%;
 }
 
 html, body {
@@ -29,4 +31,13 @@ html, body {
   width: 100%;
   margin: 0;
   padding-top: 54px;
+}
+
+//::-webkit-scrollbar {
+//  display: none;
+//}
+
+#route_info {
+  overflow: scroll;
+  height: 500px;
 }
