@@ -1,21 +1,20 @@
 <div class="card card-body">
-  <i class="fas fa-train"></i>
+  <div class="row">
+    <div class="col-md-3">
+      <i class="fas fa-train m-md-3"></i>
+      <i class="fas fa-arrow-down m-md-3"></i>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+
+        <p><%= 12 %> Fra: <%= 'Hausmanns gate' %></p>
+      </div>
+      <div class="row">
+
+        <p><%=  %> Til: <%= 'Vulkan' %></p>
+      </div>
+    </div>
+  </div>
+
 
 </div>
-<p id="ruter">Hei<%= @result %></p>
-<%= params[:origin] %>
-<%= params[:destination] %>
-
-
-<%# @travel['TravelProposals'].each do |proposals| %>
-<!--            <div class="card card-body">-->
-<!--              <p>Avgangstid: <%#= proposals['DepartureTime'] %></p> <br>-->
-<!--              <p>Ankomsttid: <%#= proposals['ArrivalTime'] %></p> <br>-->
-<%# proposals['Stages'].each do |line| %>
-<!--                <p>Transport: <%#= line['Transportation'] %></p> <br>-->
-<%# if line['ArrivalStop'].present? %>
-<!--                  <p>Ankomst stop: <%#= line['ArrivalStop']['Name'] %></p> <br>-->
-<%# end %>
-<%# end %>
-<!--            </div>-->
-<%# end %>
