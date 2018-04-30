@@ -10,8 +10,6 @@ class HomeController < ApplicationController
       params[:to] = 'Hoyskolen+Kristiania,+Kirkegata,+Oslo'
     end
     maps = ::GoogleMaps.new(params)
-    @fra = maps.origin
-    @til = maps.destination
     @campus = Location.all
     @travel = maps.places
   end

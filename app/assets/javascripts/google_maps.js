@@ -14,6 +14,7 @@ function initMap() {
 function calculateRoute() {
     let origin = document.getElementById('from').value;
     let destination = document.getElementById('to').value;
+    let mode = document.getElementById('mode').value;
     let directionsService = new google.maps.DirectionsService();
     let directionsDisplay = new google.maps.DirectionsRenderer();
 
@@ -28,7 +29,7 @@ function calculateRoute() {
         destination: destination,
         travelMode: 'TRANSIT',
         transitOptions: {
-            modes: ['TRAM', 'BUS']
+            modes: [mode]
         },
         provideRouteAlternatives: false
     };
