@@ -12,6 +12,10 @@ class HomeController < ApplicationController
     @travel = maps.places
   end
 
+  def route_info
+    render partial: 'home/route_info'
+  end
+
   def brenneriveien
 
   end

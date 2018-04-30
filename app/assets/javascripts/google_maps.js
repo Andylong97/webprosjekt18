@@ -1,7 +1,7 @@
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 59.916303, lng: 10.760242},
+        center: {lat: 59.916303, lng:10.760242},
         zoom: 13
     });
 
@@ -33,26 +33,36 @@ function calculateRoute() {
             directionsDisplay.setDirections(response);
         }
     });
+    document.getElementById('#route_info').load('/home/route_info');
 }
 
-function ruterTravel1() {
+function getTravel() {
+    return {
+        origin: document.getElementById('from').value,
+        destination: document.getElementById('to').value
+    }
+}
+
+function routeInfo() {
     let origin = document.getElementById('from').value;
     let destination = document.getElementById('to').value;
-    let url = 'http://reisapi.ruter.no/Travel/GetTravels?fromPlace=' + origin + '&toPlace=' + destination + '&isafter=true';
+    let url = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&destination=' + destination + '&key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE';
     let xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", url, true ); // false for synchronous request
-    xmlHttp.send( null );
-    document.getElementById('ruter').value = xmlHttp.responseText;
-    console.log(xmlHttp.responseText);
+    xmlHttp.send();
+    console.log(xmlHttp.responseType);
+    document.getElementById('ruter').innerHTML = xmlHttp.responseType;
+
 }
 
 function ruterTravel() {
     let origin = document.getElementById('from').value;
     let destination = document.getElementById('to').value;
     let xhttp = new XMLHttpRequest();
-    let url = 'http://reisapi.ruter.no/Travel/GetTravels?fromPlace=3010011&toPlace=3010011&isafter=true';
+    let url = 'https://maps.googleapis.com/maps/api/directions/json?origin=' + origin + '&destination=' + destination + '&key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE';
     xhttp.open("GET", url, true);
     xhttp.setRequestHeader("Content-type", "application/json");
-    xhttp.send();
-    let response = JSON.parse(xhttp.responseText);
+    xhttp.setRequestHeader('Access-Control-Allow-Origin', '*');
+    xhttp.send( null );
+    document.getElementById('ruter').innerHTML = xhttp.response;
 }
