@@ -31,5 +31,3 @@
     t.string "password"
     t.string "salt"
   end
-
-end
