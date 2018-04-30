@@ -16,8 +16,16 @@
       <h1>Høyskolen Kristiana</h1>
       <hr>
       <h4>Campusene</h4>
-      <div class="container">
-
+      <div class="row">
+          <title>Brenneriveien:</title>
+          <%= link_to image_tag('campus_brenneriveien.jpg',class:"rounded float-left", id:"campus"), '/brenneriveien' %>
+          <title>Fjerdingen:</title>
+          <%= link_to image_tag('campus_fjerdingen.jpg',class:"rounded float-left", id:"campus"), '/fjerdingen'%>
+          <title>Kvadraturen</title>
+          <%= link_to image_tag('campus_kvadraturen',class:"rounded float-left", id:"campus"), '/kvadraturen'%>
+          <title>Vulkan</title>
+          <%= link_to image_tag('campus_vulkan.jpg',class:"rounded float-left", id:"campus"), '/vulkan'%>
+        </div>
       </div>
       <hr>
       <h4>Kontakt informasjon:</h4>
@@ -31,20 +39,28 @@
       <div class="row">
         <!---->
         <div class="col-md-4">
-          <h4>Student tilbud:</h4>
-          <p>Lege</p>
-          <p>Tannlege</p>
-          <p>Rådgivning</p>
+          <h4>SiO tilbud:</h4>
+            <ul>
+              <li><a href="https://www.sio.no/helse">Lege</a></li>
+              <li><a href="https://www.sio.no/helse/tannlege">Tannlege</a></li>
+              <li><a href="https://www.sio.no/helse/radgivning">Rådgivning</a></li>
+            </ul>
         </div>
         <div class="col-md-4">
           <h4>Mat tilbud:</h4>
+            <ul>
+              <li><a href="https://www.rema.no/kampanjevarer">Rema 1000</a></li>
+              <li><a href="http://kundeavis.coop.no/aviser/prix/ost/?id=4306">Coop Prix</a></li>
+              <li><a href="https://www.tilbudsuken.no/tilbudsavis/Dagligvarer/joker">Joker</a></li>
+              <li><a href="http://kundeavisene.no/7-kiwi?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauT3efDxcWNqNg-UIFvUUzLIP_HqdN7sT9xuH-twHagFKb5CYH2OXo4aAnuYEALw_wcB">Kiwi</a></li>
+              <li><a href="https://meny.no/tilbud">Meny</a></li>
+            </ul>
         </div>
       </div>
       <hr>
       <h4>Mer informasjon på:</h4>
-      <
-      <p>Kristiania.no</p>
-      <p>Westerdals.no</p>
+      <a href="https://kristiania.no">Kristiana.no</a><br>
+      <a href="https://www.westerdals.no">Westerdals.no</a>
     </div>
     </div>
   </div>
