@@ -11,12 +11,13 @@
   <div class="col-lg-8 card card-header">
     <div class="card-body">
       <div class="row">
-          <select class="btn-dark" onchange="calculateRoute(); routeInfo();" id="from">
+        <%= form_tag action: 'route_info' do %>
+          <select class="btn-dark" onchange="calculateRoute(); getTravel();" id="from">
             <% @campus.each do |from| %>
               <option value="<%= from.address %>"><%= from.name %></option>
             <% end %>
           </select>
-          <select class="btn-dark" onchange="calculateRoute(); routeInfo();" id="to">
+          <select class="btn-dark" onchange="calculateRoute();" id="to">
             <% @campus.each do |to| %>
               <option value="<%= to.address %>"
               <% if to.name == 'Vulkan' %>
@@ -25,6 +26,7 @@
               ><%= to.name %></option>
             <% end %>
           </select>
+        <% end %>
       </div>
       <div class="row">
         <div class="col-lg-8">

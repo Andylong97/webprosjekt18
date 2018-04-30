@@ -24,6 +24,10 @@ Rails.application.routes.draw do
 
   post '/logistics', to: 'home#logistic_planner'
 
+  get '/route_info', to: 'home#route_info'
+
+  post '/route_info', to: 'home#route_info'
+
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

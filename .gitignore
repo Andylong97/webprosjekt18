@@ -18,4 +18,5 @@
 
 .byebug_history
 .idea/*
-config/database.yml
+/config/database.yml
+.DS_Store/*

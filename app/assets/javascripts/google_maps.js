@@ -33,14 +33,15 @@ function calculateRoute() {
             directionsDisplay.setDirections(response);
         }
     });
-    document.getElementById('#route_info').load('/home/route_info');
 }
 
 function getTravel() {
-    return {
-        origin: document.getElementById('from').value,
-        destination: document.getElementById('to').value
-    }
+    let origin = document.getElementById('from').value;
+    let destination = document.getElementById('to').value;
+    let url = '/route_info?origin=' + origin + '&destination=' + destination;
+    let xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, true ); // false for synchronous request
+    xmlHttp.send();
 }
 
 function routeInfo() {
