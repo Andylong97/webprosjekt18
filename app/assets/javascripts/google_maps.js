@@ -26,7 +26,11 @@ function calculateRoute() {
     let request = {
         origin: origin,
         destination: destination,
-        travelMode: google.maps.DirectionsTravelMode.TRANSIT
+        travelMode: 'TRANSIT',
+        transitOptions: {
+            modes: ['TRAM', 'BUS']
+        },
+        provideRouteAlternatives: false
     };
     directionsService.route(request, function(response, status) {
         if (status == 'OK') {
