@@ -12,20 +12,6 @@
     <div class="card-body">
       <div class="row">
         <%= form_tag '/logistics' do %>
-<!--          <select class="btn-dark" onchange="calculateRoute(); getTravel(); this.form.submit();" id="from">-->
-            <%# @campus.each do |from| %>
-<!--              <option value="<%#= from.address %>"><%#= from.name %></option>-->
-            <%# end %>
-<!--          </select>-->
-<!--          <select class="btn-dark" onchange="calculateRoute(); getTravel(); this.form.submit()" id="to">-->
-            <%# @campus.each do |to| %>
-<!--              <option value="<%#= to.address %>"-->
-              <%# if to.name == 'Vulkan' %>
-<!--                  selected=selected-->
-                  <%# end %>
-<!--              ><%#= to.name %></option>-->
-            <%# end %>
-<!--          </select>-->
           <%= hidden_field_tag 'BUS', 'TRAM', id: 'mode' %>
           <%= select_tag 'from', options_for_select(@campus.collect {|b| [b.name, b.address]}, params[:from]), class: 'btn-dark', onChange: 'this.form.submit();' %>
           <%= select_tag 'to', options_for_select(@campus.collect {|b| [b.name, b.address]}, params[:to]), class: 'btn-dark', onChange: 'this.form.submit();' %>
