@@ -5,18 +5,13 @@ class HomeController < ApplicationController
   end
 
   def logistic_planner
+    if params[:from].nil? && params[:to].nil?
+      params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
+      params[:to] = 'Hoyskolen+Kristiania,+Kirkegata,+Oslo'
+    end
     maps = ::GoogleMaps.new(params)
-    @fra = maps.origin
-    @til = maps.destination
     @campus = Location.all
     @travel = maps.places
-  end
-
-  def route_info
-    maps = ::GoogleMaps.new(params)
-    @travel = maps.places
-    @result = 'Hello this is working'
-    render partial: 'home/route_info'
   end
 
   def brenneriveien
