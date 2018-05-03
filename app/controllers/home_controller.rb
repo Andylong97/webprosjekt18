@@ -29,4 +29,8 @@ class HomeController < ApplicationController
   def vulkan
 
   end
+
+  def kvadraturenalt
+
+  end
 end
