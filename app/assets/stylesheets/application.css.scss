@@ -16,20 +16,38 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@media (min-width: 992px) {
+@media (min-width: 756px) {
   body {
     padding-top: 56px;
+  }
+  #logo_small {
+    display: none;
+  }
+  #logo {
+    display: block;
+  }
+}
+
+@media (max-width: 756px) {
+  body {
+    padding-top: 56px;
+  }
+  #logo_small {
+    display: block;
+  }
+  #logo {
+    display: none;
   }
 }
 
 #map {
   height: 100%;
+  width: 100%;
   min-height: 400px;
 }
 
 #logo {
-  padding: 10px;
-  margin-right: 10px;
+  width: 30%;
   color: black;
 }
 
@@ -61,4 +79,12 @@ html, body {
 
 .div-test {
   border: 1px solid black;
+}
+
+.overflow {
+  overflow-wrap: break-spaces;
+}
+
+.flag {
+  width: 50px;
 }

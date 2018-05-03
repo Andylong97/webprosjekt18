@@ -11,10 +11,12 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
       <div class="container-fluid">
+        <a href="/index" id="logo_small">
+            <%= render 'home/logo_symbol_christiania' %>
+        </a>
         <a href="/index" id="logo">
           <%= render 'home/logo_christiania' %>
         </a>
-        <i class="icon"></i>
         <a class="text-dark" href="/index"><%= t('welcome') %></br><Small><%= t('for_us') %></Small></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -36,12 +38,13 @@
             <li class="nav-item">
               <a class="nav-link text-dark" href="/kvadraturen">Kvadraturen</a>
             </li>
+            <%= render 'shared/change_locale' %>
           </ul>
         </div>
+
       </div>
-      <%= render 'shared/change_locale' %>
     </nav>
-    <div class="container-fluid" style="height: 100%">
+    <div class="container-fluid" style="height: 100%; width: 100%;">
         <%= yield %>
     </div>
   </body>

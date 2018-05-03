@@ -13,15 +13,15 @@
       <div class="row">
         <%= form_tag '/logistics' do %>
           <%= hidden_field_tag 'Mode', 'TRAM', id: 'mode' %>
-          <%= select_tag 'from', options_for_select(@campus.collect {|b| [b.name, b.address]}, params[:from]), class: 'btn-dark', onChange: 'this.form.submit();' %>
-          <%= select_tag 'to', options_for_select(@campus.collect {|b| [b.name, b.address]}, params[:to]), class: 'btn-dark', onChange: 'this.form.submit();' %>
+          <%= select_tag 'from', options_for_select(@from.collect {|b| [b.name, b.address]}, params[:from]), class: 'btn-dark', onChange: 'this.form.submit();' %>
+          <%= select_tag 'to', options_for_select(@to.collect {|b| [b.name, b.address]}, params[:to]), class: 'btn-dark', onChange: 'this.form.submit();' %>
         <% end %>
       </div>
       <div class="row">
-        <div class="col-md-8 col-sm-12">
+        <div class="col-12 col-md-6">
           <div id="map"></div>
         </div>
-        <div id="route_info" class="col-md-4 col-sm-12" style="min-width: 350px;">
+        <div id="route_info" class="col-12 col-md-6">
             <%= render 'home/route_info' %>
         </div>
       </div>

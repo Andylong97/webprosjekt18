@@ -12,9 +12,9 @@ class HomeController < ApplicationController
       params[:to] = 'Hoyskolen+Kristiania,+Kirkegata,+Oslo'
     end
     maps = ::GoogleMaps.new(params)
-    @campus = Location.all
+    @from = Location.where('NOT address LIKE ?', params[:to])
+    @to = Location.where('NOT address LIKE ?', params[:from])
     @travel = maps.places(Location.find_by(address: params[:from]).stop_id, Location.find_by(address: params[:to]).stop_id)
-    @test = I18n.t('hello')
   end
 
   def brenneriveien

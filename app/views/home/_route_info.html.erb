@@ -1,15 +1,15 @@
 <div class="card card-header">
   <div class="row">
+    <div class="card-body col-md-2 overflow">
+      <h6 class="overflow"><%= t('logistics.route') %></h6>
+    </div>
+    <div class="card-body col-md-7 overflow">
+      <h6 class="overflow"><%= t('logistics.departure') + " " +  t('logistics.from_to') %></h6>
+    </div>
     <div class="card-body col-md-2">
-      <h6><%= t('logistics.route') %></h6>
-    </div>
-    <div class="card-body col-md-7">
-      <h6><%= t('logistics.departure') + " " +  t('logistics.from_to') %></h6>
-    </div>
-    <div class="card-body col-md-3">
       <div class="row">
         <i class="fas fa-clock"></i>
-        <h6 class="ml-md-2"><%= t('logistics.from_to') %></h6>
+        <h6 class="ml-md-2 overflow"><%= t('logistics.from_to') %></h6>
       </div>
     </div>
   </div>
