@@ -1,5 +1,7 @@
 # Home Controller
 class HomeController < ApplicationController
+  before_action :set_locale
+
   def index
 
   end
@@ -11,7 +13,8 @@ class HomeController < ApplicationController
     end
     maps = ::GoogleMaps.new(params)
     @campus = Location.all
-    @travel = maps.places
+    @travel = maps.places(Location.find_by(address: params[:from]).stop_id, Location.find_by(address: params[:to]).stop_id)
+    @test = I18n.t('hello')
   end
 
   def brenneriveien
@@ -33,4 +36,16 @@ class HomeController < ApplicationController
   def kvadraturenalt
 
   end
+
+  def change_locale
+    locale = params[:id]
+    raise 'unsupported locale' unless ['en', 'nb'].include?(locale)
+    session[:locale] = locale
+    redirect_back(fallback_location: root_path)
+  end
+
+  def set_locale
+    I18n.locale = session[:locale]
+  end
+
 end
