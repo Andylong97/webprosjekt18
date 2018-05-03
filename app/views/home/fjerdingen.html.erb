@@ -1,48 +1,123 @@
-<body>
+<!-- BANNER -->
+<div id="banner_image_div">
+
+  <!-- BILDE HER -->
+  <%= image_tag 'campus_fjerdingen', id: 'campus_banner' %>
+
+  <!-- BANNER TEKST HER-->
+  <div class="container-fluid" id="banner_text_div">
+    <h1 id="klasse_tittel">Campus</h1>
+    <h2 id="campus_tittel">Fjerdingen</h2>
+    <p id="info_banner">Det er her her du finner de kuleste, smarteste, mest kreative
+      og innovative elevene. På denne siden kan du finne hva som er i nærheten av campuset, som mat, resturanter, utesteder osv.
+      <br>ELLER LISTE OM FAKULTETER HER</p>
+  </div>
+</div>
+
+<!-- DELEN UNDER -->
+<div id="body_div">
   <div class="container">
+    <br>
+    <!-- INFO, TELEFON, ADRESSE-->
+    <h1 id="info_tittel">Info</h1>
     <div class="row">
-      <div class="col-md-3">
-        <h1>Fjerdingen</h1>
-      </div>
-      <div class="col-md-4 offset-md-8">
-        <button class="button">annet</button>
-        <button class="button">restauranter</button>
-        <button class="button">dagligvarer</button>
-      </div>
-    </div>
-  </div>
 
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-5'>
-        <p>
-           Det er her du finner de kuleste, smarteste, mest kreative of innovative elevene.
-            På denne siden kan du finne hva som er i nærheten av campuset, som mat, resturanter, utesteder osv.
-        </p>
-
-        <h6>Telefon</h6>
+      <!-- TELEFON -->
+      <div class="col-md-4" id="info_div">
+        <h2 class="tittel-info">Telefon</h2>
         <p>22 05 75 50</p>
-
-        <br>
-
-        <h6>Adresse</h6>
-        <p>Chr. Krohgs gate 32, 0186 Oslo, Norge</p>
-
-        <br>
-
-        <h6>Åpningstider</h6>
-        <p>
-          <span class="sub_tittel">Man – Fre:</span> 08.00 – 24.00 <br>
-          <span class="sub_tittel">Lør – Søn:</span> 10.00 – 23.00 <br>
-          <span class="sub_tittel">Resepsjon er bemannet Man - Fre:</span> 08.00 - 16.00
-        </p>
       </div>
 
-        <div class='col-md-7'>
-          <%= image_tag 'campus_fjerdingen.jpg' %>
-        </div>
+      <!-- ÅPNINGSTIDER -->
+      <div class="col-md-4" id="info_div">
+        <h2 class="tittel-info">Åpningstider</h2>
+        <p>Man–fre: 08.00 – 24.00<br>
+          Lør–søn: 10.00 – 23.00</p>
+      </div>
 
+      <!-- ADRESSE -->
+      <div class="col-md-4">
+        <h2 class="tittel-info">Adresse</h2>
+        <p id="campus_adresse">Chr. Krohgs gate 32<br> 0186 Oslo<br>Norge</p>
+      </div>
+    </div>
+
+    <div class="row justify-content-between">
+
+      <!-- RØD BOKS KNAPPER -->
+      <div class="col-md-4" id="farge-div">
+        <h2 id="store-info-tittel">Nærområdet</h2>
+
+        <!-- KNAPP 1 -->
+        <button class="button">Matbutikker</button>
+
+        <ul>
+          <li>Prix Husmannsgate</li>
+          <li>Food Express</li>
+          <li>pluss en til</li>
+
+        </ul>
+
+        <!-- KNAPP 2 -->
+        <button class="button">Spisesteder</button>
+
+        <ul>
+          <li>Südøst</li>
+          <li></li>
+          <li>Subway</li>
+        </ul>
+
+        <!-- KNAPP 3 -->
+        <button class="button">Annet</button>
+        <ul>
+          <li>Matkroken</li>
+          <li>en til</li>
+          <li>pluss en til</li>
+        </ul>
+      </div>
+
+      <!-- KART-->
+      <div class="col-md-7">
+        <div id="map-div">
+          <p>Placeholder for integrering av kart</p>
+        </div>
+      </div>
 
     </div>
+
+    <div class="row">
+      <!-- AUDITORIUM -->
+      <div class="col-md-12">
+
+        <h3>Auditorium</h3>
+        <p class="offset-md-1">Auditorum finner mann rett in hovedinngangen og siste dør til venstre</p>
+
+      </div>
+
+      <!-- ANNEN EKSTRA INFO -->
+      <div class="col-md-12">
+
+        <h3>Bibliotek</h3>
+        <p class="offset-md-1">Biblioteket ligger inn og forbi kantina</p>
+
+      </div>
+
+      <!-- ANNEN EKSTRA INFO -->
+      <div class="col-md-12">
+
+        <h3>Ekstra Rom</h3>
+        <p class="offset-md-1">På Fjerdingen finner manm mange ekstra rom som kan brukes fritt av studenter</p>
+
+      </div>
+
+
+    </div> <!-- END ROW -->
+
+    <!-- FOOTER -->
+    <div class="container-fluid" id="campus_footer">
+
+    </div>
+
   </div>
-</body>
+
+</div> <!-- END CONTAINER-->
