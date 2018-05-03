@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.scss.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.button {
+  border-radius: 4px;
+}
+
 #kvadraturen_image_div {
 }
 
@@ -26,6 +30,6 @@
 }
 //start of fjerdingen css
 
-#banner_fjerdingen {
-
+.sub_tittel {
+  font-weight: bold;
 }
