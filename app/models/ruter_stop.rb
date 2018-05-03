@@ -1,0 +1,2 @@
+class RuterStop < ApplicationRecord
+end
