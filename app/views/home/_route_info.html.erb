@@ -1,39 +1,62 @@
+<div class="card card-header">
+  <div class="row">
+    <div class="card-body col-md-2">
+      <h6><%= t('logistics.route') %></h6>
+    </div>
+    <div class="card-body col-md-7">
+      <h6><%= t('logistics.departure') + " " +  t('logistics.from_to') %></h6>
+    </div>
+    <div class="card-body col-md-3">
+      <div class="row">
+        <i class="fas fa-clock"></i>
+        <h6 class="ml-md-2"><%= t('logistics.from_to') %></h6>
+      </div>
+    </div>
+  </div>
+</div>
+
 <% @travel['TravelProposals'].each do |travelproposal| %>
   <div class="card card-body">
     <div class="row">
-    <% travelproposal['Stages'].each do |stage| %>
-      <% unless stage['Transportation'] == 0 %>
-        <div class="col-md-1">
-          <div class="row">
-            <% case stage['Transportation'] %>
-            <% when 7 %>
-              <i class="fas fa-train mb-md-3"></i>
-            <% when 2 %>
-              <i class="fas fa-bus mb-md-3"></i>
-            <% else %>
-              <p></p>
-            <% end %>
-            <p class="ml-md-2"><%= stage['LineName'] %></p>
+      <% travelproposal['Stages'].each do |stage| %>
+        <% unless stage['Transportation'] == 0 %>
+          <div class="col-md-2">
+            <div class="row">
+              <div class="col-md-12 ml-md-4">
+                <div class="row">
+                  <% case stage['Transportation'] %>
+                  <% when 7 %>
+                    <i class="fas fa-train"><p class="mt-md-1"><%= stage['LineName'] %></p></i>
+                  <% when 2 %>
+                    <i class="fas fa-bus"><p class="mt-md-1"><%= stage['LineName'] %></p></i>
+                  <% else %>
+                    <p></p>
+                  <% end %>
+                </div>
+                <div class="row">
+                  <i class="fas fa-arrow-down"></i>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="row">
-            <%= stage['DepartureStop']['Name'] %>
+          <div class="col-md-7">
+            <div class="row ml-md-2">
+              <%= stage['DepartureStop']['Name'] %>
+            </div>
+            <div class="row ml-md-2">
+              <%= stage['ArrivalStop']['Name'] %>
+            </div>
           </div>
-          <div class="row">
-            <%= stage['ArrivalStop']['Name'] %>
-          </div>
-        </div>
+        <% end %>
       <% end %>
-    <% end %>
-    <div class="col-md-3">
-      <div class="row">
-        <p>ArrivalTime: </p><%= DateTime.parse(travelproposal['ArrivalTime']).strftime('%H:%M') %>
+      <div class="col-md-3">
+        <div class="row ml-md-2">
+          <%= DateTime.parse(travelproposal['DepartureTime']).strftime('%H:%M') %>
+        </div>
+        <div class="row ml-md-2">
+          <%= DateTime.parse(travelproposal['ArrivalTime']).strftime('%H:%M') %>
+        </div>
       </div>
-      <div class="row">
-        <p>DepartureTime: </p><%= DateTime.parse(travelproposal['DepartureTime']).strftime('%H:%M') %>
-      </div>
-    </div>
     </div>
   </div>
 <% end %>

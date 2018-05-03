@@ -1,0 +1,8 @@
+nb:
+  planner: "Veiviser"
+  welcome: "Velkommen til Studenthjelper'n"
+  for_us: "- For oss på høyskolen!"
+  logistics:
+      route: "Rute"
+      departure: "Avgang"
+      from_to: "Fra - Til"
