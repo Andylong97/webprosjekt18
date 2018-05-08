@@ -1,10 +1,10 @@
+# frozen_string_literal: true
+
 # Home Controller
 class HomeController < ApplicationController
   before_action :set_locale
 
-  def index
-
-  end
+  def index; end
 
   def logistic_planner
     if params[:from].nil? && params[:to].nil?
@@ -15,32 +15,22 @@ class HomeController < ApplicationController
     @from = Location.where('NOT address LIKE ?', params[:to])
     @to = Location.where('NOT address LIKE ?', params[:from])
     @travel = @maps.places(Location.find_by(address: params[:from]).coordinate,
-                          Location.find_by(address: params[:to]).coordinate)
+                           Location.find_by(address: params[:to]).coordinate)
   end
 
-  def brenneriveien
+  def brenneriveien; end
 
-  end
+  def fjerdingen; end
 
-  def fjerdingen
+  def kvadraturen; end
 
-  end
+  def vulkan; end
 
-  def kvadraturen
-
-  end
-
-  def vulkan
-
-  end
-
-  def kvadraturenalt
-
-  end
+  def kvadraturenalt; end
 
   def change_locale
     locale = params[:id]
-    raise 'unsupported locale' unless ['en', 'nb'].include?(locale)
+    raise 'unsupported locale' unless %w[en nb].include?(locale)
     session[:locale] = locale
     redirect_back(fallback_location: root_path)
   end
@@ -48,5 +38,4 @@ class HomeController < ApplicationController
   def set_locale
     I18n.locale = session[:locale]
   end
-
 end
