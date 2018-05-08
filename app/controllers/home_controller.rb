@@ -9,12 +9,13 @@ class HomeController < ApplicationController
   def logistic_planner
     if params[:from].nil? && params[:to].nil?
       params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
-      params[:to] = 'Hoyskolen+Kristiania,+Kirkegata,+Oslo'
+      params[:to] = 'Kirkegata+24,+Oslo'
     end
-    maps = ::GoogleMaps.new(params)
+    @maps = ::GoogleMaps.new(params)
     @from = Location.where('NOT address LIKE ?', params[:to])
     @to = Location.where('NOT address LIKE ?', params[:from])
-    @travel = maps.places(Location.find_by(address: params[:from]).stop_id, Location.find_by(address: params[:to]).stop_id)
+    @travel = @maps.places(Location.find_by(address: params[:from]).coordinate,
+                          Location.find_by(address: params[:to]).coordinate)
   end
 
   def brenneriveien

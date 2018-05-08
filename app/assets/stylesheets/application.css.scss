@@ -75,6 +75,7 @@ html, body {
 #route_info {
   overflow: scroll;
   height: 500px;
+  min-width: 480px;
 }
 
 .div-test {
@@ -87,4 +88,14 @@ html, body {
 
 .flag {
   width: 50px;
+}
+
+.walk {
+  height: 1em;
+}
+
+.select-button {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 15px;
 }
