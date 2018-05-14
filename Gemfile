@@ -22,7 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'bootstrap', '~> 4.1.0'
 
-gem 'font-awesome-sass', '~> 5.0.9'
+# gem 'font-awesome-sass', '~> 5.0.9'
 
 gem 'figaro'
 
