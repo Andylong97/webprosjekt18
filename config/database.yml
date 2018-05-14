@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  url: mysql2://web:pass@localhost
+  url: <%= ENV["DEV_DATABASE_URL"] %>
 
 development:
   <<: *default

@@ -87,6 +87,7 @@ function setRoute(rute) {
                 }
             }
             if(directions.routes[i].legs[0].steps[j].travel_mode == 'WALKING' && directions.routes[i].legs[0].steps.length == 1){
+                // console.log(rute);
                 directionsDisplay.setRouteIndex(i);
                 return;
             }
@@ -101,21 +102,29 @@ function initMap() {
     });
 }
 
-function drawLine(geo) {
-    list = [];
-    for(let i = 0; i < geo.length; i++){
-        rute(google.maps.geometry.encoding.decodePath(geo[i]));
-    }
-}
-
 function rute(list) {
-    console.log(list);
+    removeLine();
+    lines = [];
+    for(let i = 0; i< list.length; i++){
+        lines.push({lat: list[i][0], lng: list[i][1]})
+    }
+
+    marker = new google.maps.Marker({
+            position: {lat: list[0][0], lng: list[0][1]},
+            title: 'A',
+            map: map
+    });
+    marker = new google.maps.Marker({
+        position: {lat: list[list.length-1][0], lng: list[list.length-1][1]},
+        title: 'B',
+        map: map
+    });
     route = new google.maps.Polyline({
-        path: list,
+        path: lines,
         geodesic: true,
-        strokeColor: '#FF0000',
+        strokeColor: '#0000FF',
         strokeOpacity: 1.0,
-        strokeWeight: 2
+        strokeWeight: 5
     });
     route.setMap(map);
 }
@@ -124,19 +133,4 @@ function removeLine() {
     if(route != null){
         route.setMap(null);
     }
-}
-
-function drawRoute(markers) {
-    list = [];
-    for(let i = 0; i < markers.length; i++){
-        list.push({ 'lat': markers[i]['lat'], 'lng': markers[i]['lon'] });
-    }
-    route = new google.maps.Polyline({
-        path: list,
-        geodesic: true,
-        strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2
-    });
-    route.setMap(map);
 }

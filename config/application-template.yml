@@ -1,0 +1,16 @@
+DEV_DATABASE_URL: 'mysql2://username:password@127.0.0.1'
+GOOGLE_MAPS_API: 'Ask Kjell'
+API_IPSTACK: 'Ask Kjell'
+
+# Create a new file named application.yml containing the above variables
+
+# To create the database:
+# rails db:create
+
+# Run migrations:
+# rails db:migrate
+
+# Populate database:
+# rails db:seed
+
+

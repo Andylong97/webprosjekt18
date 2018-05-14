@@ -12,10 +12,18 @@ class HomeController < ApplicationController
       params[:to] = 'Kirkegata+24,+Oslo'
     end
     @maps = ::GoogleMaps.new(params)
-    @from = Location.where('NOT address LIKE ?', params[:to])
-    @to = Location.where('NOT address LIKE ?', params[:from])
-    @travel = @maps.places(Location.find_by(address: params[:from]).coordinate,
-                           Location.find_by(address: params[:to]).coordinate)
+    @directions = Directions.new(params, session)
+    @from = []
+    Location.where('NOT address LIKE ?', params[:to]).each do |f|
+      @from.push(name: f.name, address: f.address)
+    end
+    @from.push(name: I18n.t('logistics.current_address'), address: "#{request.location.latitude},#{request.location.longitude}")
+    @to = []
+    Location.where('NOT address LIKE ?', params[:from]).each do |t|
+      @to.push(name: t.name, address: t.address)
+    end
+    @to.push(name: I18n.t('logistics.current_address'), address: "#{request.location.latitude},#{request.location.longitude}")
+    # @maps.city_bikes(request.remote_ip)
   end
 
   def brenneriveien; end
@@ -26,7 +34,9 @@ class HomeController < ApplicationController
 
   def vulkan; end
 
-  def kvadraturenalt; end
+  def kvadraturenalt
+    @bikes = GoogleMaps.new(params).city_bikes(request.location)
+  end
 
   def change_locale
     locale = params[:id]

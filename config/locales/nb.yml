@@ -5,4 +5,8 @@ nb:
   logistics:
       route: "Rute"
       departure: "Avgang"
+      arrival: "Ankomst"
       from_to: "Fra - Til"
+      arrival_stop: "Avgangsstop"
+      departure_stop: "Ankomststop"
+      current_address: "Min posisjon"

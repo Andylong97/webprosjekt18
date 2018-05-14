@@ -24,6 +24,10 @@ gem 'bootstrap', '~> 4.1.0'
 
 gem 'font-awesome-sass', '~> 5.0.9'
 
+gem 'figaro'
+
+gem 'polylines'
+
 gem 'rack-cors'
 
 gem 'jquery-rails'
@@ -33,6 +37,8 @@ gem 'rails-i18n'
 gem 'i18n-tasks'
 
 gem 'geoutm'
+
+gem 'geocoder'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

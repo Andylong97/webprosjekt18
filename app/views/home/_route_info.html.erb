@@ -1,74 +1,97 @@
 <div class="card card-header">
   <div class="row">
-    <div class="card-body col-md-2 overflow">
-      <h6 class="overflow"><%= t('logistics.route') %></h6>
+    <div class="card-body col-3">
+      <h6><%= t('logistics.route') %></h6>
     </div>
-    <div class="card-body col-md-7 overflow">
-      <h6 class="overflow"><%= t('logistics.departure') + " " + t('logistics.from_to') %></h6>
+    <div class="card-body col-6">
+      <div class="row">
+        <h6><%= t('logistics.departure') %></h6>
+        <h6>-</h6>
+        <h6><%= t('logistics.arrival') %></h6>
+      </div>
     </div>
-    <div class="card-body col-md-3">
+    <div class="card-body col-3">
       <div class="row">
         <i class="fas fa-clock mr-md-2"></i>
-        <h6 class="overflow"><%= t('logistics.from_to') %></h6>
       </div>
     </div>
   </div>
 </div>
-<!--onClick="drawRoute(<%#= @maps.route_info(travelproposal['Stages']).to_json %>);"-->
-<% @travel['TravelProposals'].each do |travelproposal| %>
-  <div class="card card-body" onclick="removeLine(); drawLine(<%= @maps.geometry(travelproposal['Stages']).to_json %>);">
-    <% travelproposal['Stages'].each do |stage| %>
-      <div class="row" >
-<!--      <div class="row">-->
-        <% if stage['Transportation'] == 0 && stage.length == 1 %>
-          <div class="col-md-2">
-            <div class="row">
-              <div class="col-md-12 ml-md-4">
-                <div class="row">
-                  <%= image_tag 'walk-icon.png', class: 'walk' %>
-                </div>
-              </div>
+<% instruction = 0 %>
+<% @directions.routes.each do |route| %>
+  <div class="card card-body" onclick="rute(<%= route.overview_polyline %>);">
+    <% route.legs.each do |leg| %>
+      <% constructed = false %>
+      <% leg.steps.each do |step| %>
+        <% if leg.steps.size == 1 %>
+          <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false">
+            <div class="col-2 fas">
+              <i class="fas fa-arrow-down mt-4"></i>
             </div>
+            <div class="col-7 fas">
+              <p class="row"><%= leg.start_address %></p>
+              <p class="row"><%= leg.end_address %></p>
+            </div>
+            <div class="col-3">
+              <i class="row fas fa-clock"><p><%= step.duration %></p></i>
+              <i class="row fas fa-walking"><p><%= step.distance %></p></i>
+            </div>
+          </div>
+          <div id="<%= "instructions#{instruction}" %>" class="collapse">
+            <% number = 1 %>
+            <% step.instructions.each do |instruct| %>
+              <p class="fas row card-header"><%= "#{number}. #{instruct.instruction}" %></p>
+              <% number += 1 %>
+            <% end %>
           </div>
         <% end %>
-        <% unless stage['Transportation'] == 0 %>
-          <div class="col-md-2">
-            <div class="row">
-              <div class="col-md-12 ml-md-4">
-                <div class="row">
-                  <% case stage['Transportation'] %>
-                  <% when 7 %>
-                    <i class="fas fa-train"><p class="mt-md-1"><%= stage['LineName'] %></p></i>
-                  <% when 2 %>
-                    <i class="fas fa-bus"><p class="mt-md-1"><%= stage['LineName'] %></p></i>
-                  <% else %>
-                    <p></p>
-                  <% end %>
-                </div>
-                <div class="row">
-                  <i class="fas fa-arrow-down"></i>
-                </div>
+        <% if leg.steps.size > 1 %>
+          <% unless step.transit? %>
+            <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false">
+              <div class="col-2 fas">
+                <% case step.vehicle %>
+                <% when 'BUS' %>
+                  <i class="fas fa-bus mb-1"></i>
+                  <p><%= step.short_name %></p>
+                <% when 'TRAM' %>
+                  <i class="fas fa-train mb-1"></i>
+                  <p><%= step.short_name %></p>
+                <% else %>
+                  <i class="fas fa-subway mb-1"></i>
+                  <p><%= step.short_name %></p>
+                <% end %>
+                <i class="fas fa-angle-down"></i>
               </div>
+              <div class="col-7 fas">
+                <p class="row"><%= step.departure_stop %></p>
+                <p class="row"><%= step.arrival_stop %></p>
+              </div>
+              <div class="col-3 fas">
+                <p class="row"><%= step.departure_time %></p>
+                <p class="row"><%= step.arrival_time %></p>
+              </div>
+              <% constructed = true %>
             </div>
+          <% end %>
+          <% if constructed %>
+          <div id="<%= "instructions#{instruction}" %>" class="collapse">
+            <% num = 1 %>
+            <% leg.steps.each do |step_2| %>
+              <% unless step_2.transit? %>
+                <p class="fas row card-header"><%= "#{num}. #{step_2.instruction}" %> <br> <%= "#{t('logistics.arrival_stop')}: #{step_2.arrival_stop}" %></p>
+              <% else %>
+                <% step_2.instructions.each do |instruct| %>
+                  <p class="fas row card-header"><%= "#{num}. #{instruct.instruction}" %></p>
+                  <% num += 1 %>
+                <% end %>
+              <% end %>
+                <% num += 1 %>
+              <% end %>
           </div>
-          <div class="col-md-7">
-            <div class="row ml-md-2">
-              <%= stage['DepartureStop']['Name'] %>
-            </div>
-            <div class="row ml-md-2">
-              <%= stage['ArrivalStop']['Name'] %>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="row ml-md-2">
-              <%= DateTime.parse(travelproposal['DepartureTime']).strftime('%H:%M') %>
-            </div>
-            <div class="row ml-md-2">
-              <%= DateTime.parse(travelproposal['ArrivalTime']).strftime('%H:%M') %>
-            </div>
-          </div>
+            <% end %>
         <% end %>
-      </div>
+      <% end %>
     <% end %>
   </div>
+  <% instruction += 1 %>
 <% end %>

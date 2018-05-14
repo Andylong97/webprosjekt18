@@ -13,8 +13,7 @@
  */
 @import "home";
 @import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import "web-fonts-with-css/css/fontawesome-all.css";
 
 @media (min-width: 756px) {
   body {
@@ -37,6 +36,11 @@
   }
   #logo {
     display: none;
+  }
+
+  .logistic {
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -75,7 +79,6 @@ html, body {
 #route_info {
   overflow: scroll;
   height: 500px;
-  min-width: 480px;
 }
 
 .div-test {
@@ -88,10 +91,6 @@ html, body {
 
 .flag {
   width: 50px;
-}
-
-.walk {
-  height: 1em;
 }
 
 .select-button {
