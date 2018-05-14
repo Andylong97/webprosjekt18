@@ -96,12 +96,8 @@
 
     <!-- KART-->
     <div class="col-md-7">
-
-      <div id="map-div">
-
-        <%= image_tag'placeholder-map.png', id:'map_placeholder'%>
-
-      </div>
+      <button onclick="city_bikes(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>);">By-sykkel</button>
+      <div id="map"></div>
 
     </div>
 
@@ -151,3 +147,6 @@
   </div>
 
 </div> <!-- END CONTAINER-->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=places"
+        async defer></script>

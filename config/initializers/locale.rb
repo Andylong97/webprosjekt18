@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
-  config.i18n.available_locales = [:en, :nb]
+  config.i18n.available_locales = %i[en nb]
 end

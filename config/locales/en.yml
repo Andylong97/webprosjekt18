@@ -5,4 +5,8 @@ en:
   logistics:
     route: "Line"
     departure: "Departure"
+    arrival: "Arrival"
     from_to: "From - To"
+    arrival_stop: "Arrival stop"
+    departure_stop: "Departure stop"
+    current_address: "My location"

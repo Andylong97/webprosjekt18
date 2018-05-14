@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
@@ -5,10 +7,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+ruby '2.5.1'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
-# Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.18', '< 0.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -22,6 +24,10 @@ gem 'bootstrap', '~> 4.1.0'
 
 gem 'font-awesome-sass', '~> 5.0.9'
 
+gem 'figaro'
+
+gem 'polylines'
+
 gem 'rack-cors'
 
 gem 'jquery-rails'
@@ -29,6 +35,10 @@ gem 'jquery-rails'
 gem 'rails-i18n'
 
 gem 'i18n-tasks'
+
+gem 'geoutm'
+
+gem 'geocoder'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -53,12 +63,19 @@ group :development, :test do
 end
 
 group :development do
+  # Use mysql as the database for Active Record
+  gem 'mysql2', '>= 0.3.18', '< 0.6.0'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

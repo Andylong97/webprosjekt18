@@ -1,377 +1,1207 @@
 {
-  "geocoded_waypoints"   =>   [
-  {
-    "geocoder_status"         =>"OK",
-    "place_id"         =>"ChIJOT-_V2BuQUYRtUQG33il1iI",
-    "types"         =>         [
-    "establishment",
-    "point_of_interest",
-    "university"
-  ]
-  },
-  {
-    "geocoder_status"         =>"OK",
-    "place_id"         =>"ChIJ-wIZN4huQUYRTaKsn4K7Ekg",
-    "types"         =>         [
-    "establishment",
-    "point_of_interest",
-    "university"
-  ]
-  }
-],
-"routes"   =>   [
-{
-"bounds"         =>         {
-"northeast"            =>            {
-"lat"               =>59.916294,
-"lng"               =>10.7597385
-},
-"southwest"            =>            {
-"lat"               =>59.9093324,
-"lng"               =>10.7445804
-}
-},
-"copyrights"         =>"Map data ©2018 Google",
-"legs"         =>         [
-{
-"arrival_time"               =>               {
-"text"                  =>"1:25                  pm",
-"time_zone"                  =>"Europe/Oslo",
-"value"                  =>1525001107
-},
-"departure_time"               =>               {
-"text"                  =>"1:15                  pm",
-"time_zone"                  =>"Europe/Oslo",
-"value"                  =>1525000534
-},
-"distance"               =>               {
-"text"                  =>"1.7 km",
-"value"                  =>1681
-},
-"duration"               =>               {
-"text"                  =>"10 mins",
-"value"                  =>573
-},
-"end_address"               =>"Kirkegata 24,
-0107               Oslo,
-Norway",
-"end_location"               =>               {
-"lat"                  =>59.91124660000001,
-"lng"                  =>10.7447117
-},
-"start_address"               =>"Chr. Krohgs gate 32,
-0186               Oslo,
-Norway",
-"start_location"               =>               {
-"lat"                  =>59.916265,
-"lng"                  =>10.7597385
-},
-"steps"               =>               [
-{
-"distance"                     =>                     {
-"text"                        =>"0.3 km",
-"value"                        =>252
-},
-"duration"                     =>                     {
-"text"                        =>"3 mins",
-"value"                        =>195
-},
-"end_location"                     =>                     {
-"lat"                        =>59.916294,
-"lng"                        =>10.757193
-},
-"html_instructions"                     =>"Walk to Hausmanns gate",
-"polyline"                     =>                     {
-"points"                        =>"skulJkot`AdAt@XZ`At@                        [
-dB
-]                        ~A
-]                     zA_@pAMT
-]                  c@CN"
-},
-"start_location"               =>               {
-"lat"                  =>59.916265,
-"lng"                  =>10.7597385
-},
-"steps"               =>               [
-{
-"distance"                     =>                     {
-"text"                        =>"0.1 km",
-"value"                        =>99
-},
-"duration"                     =>                     {
-"text"                        =>"1 min",
-"value"                        =>71
-},
-"end_location"                     =>                     {
-"lat"                        =>59.9154466,
-"lng"                        =>10.7590577
-},
-"html_instructions"                     =>"Head <b>south</b> on <b>Chr. Krohgs gate</b> toward <b>Hausmanns gate</b>",
-"polyline"                     =>                     {
-"points"                        =>"skulJkot`AdAt@XZ`At@"
-},
-"start_location"                     =>                     {
-"lat"                        =>59.916265,
-"lng"                        =>10.7597385
-},
-"travel_mode"                     =>"WALKING"
-},
-{
-"distance"                     =>                     {
-"text"                        =>"0.1 km",
-"value"                        =>133
-},
-"duration"                     =>                     {
-"text"                        =>"2 mins",
-"value"                        =>104
-},
-"end_location"                     =>                     {
-"lat"                        =>59.91611570000001,
-"lng"                        =>10.7570856
-},
-"html_instructions"                     =>"Turn <b>right</b> onto <b>Hausmanns gate</b>",
-"maneuver"                     =>"turn-right",
-"polyline"                     =>                     {
-"points"                        =>"qfulJckt`A                        [
-dB
-]                        ~A
-]                     zA_@pAMT"
-},
-"start_location"                  =>                  {
-"lat"                     =>59.9154466,
-"lng"                     =>10.7590577
-},
-"travel_mode"                  =>"WALKING"
-},
-{
-"distance"                  =>                  {
-"text"                     =>"20 m",
-"value"                     =>20
-},
-"duration"                  =>                  {
-"text"                     =>"1 min",
-"value"                     =>20
-},
-"end_location"                  =>                  {
-"lat"                     =>59.916294,
-"lng"                     =>10.757193
-},
-"html_instructions"                  =>"Turn <b>right</b> onto <b>Storgata</b><div style=\"font-size:0.9e                  m\">Destination will be on the left</div>",
-"maneuver"                  =>"turn-right",
-"polyline"                  =>                  {
-"points"                     =>"wjulJy~s`A
-]                  c@CN"
-},
-"start_location"               =>               {
-"lat"                  =>59.91611570000001,
-"lng"                  =>10.7570856
-},
-"travel_mode"               =>"WALKING"
-}
-],
-"travel_mode"         =>"WALKING"
-},
-{
-"distance"         =>         {
-"text"            =>"1.3 km",
-"value"            =>1289
-},
-"duration"         =>         {
-"text"            =>"4 mins",
-"value"            =>240
-},
-"end_location"         =>         {
-"lat"            =>59.91066,
-"lng"            =>10.746558
-},
-"html_instructions"         =>"Tram towards Majorstuen",
-"polyline"         =>         {
-"points"            =>"ykulJm_t`A?ANTd@p@DF@BX`@PXTh@Nb@f@hB@@Ld@d@fBXdATt@T`ANj@p@lCJd@Jd@d@jCt@tDNp@FZBHDJBDDJBHDDHBJCB?DCDC\\Yf@k@j@m@VWDAB?JHTTVRFFHJNNHFBB\\Zt@r@n@l@DDb@b@HFDB@?FDF@D?DADCFE?A@I?AHUNa@FOFKDEDCBCJA@?FDJFHJFNFNHT@DFLJPn@v@x@v@n@p@DHDL@D@T?HGf@Y`Be@pCIl@g@|CCFA@EDGBA@IAyAqACKAEAK?CM@"
-},
-"start_location"         =>         {
-"lat"            =>59.916294,
-"lng"            =>10.757193
-},
-"transit_details"         =>         {
-"arrival_stop"            =>            {
-"location"               =>               {
-"lat"                  =>59.91066,
-"lng"                  =>10.746558
-},
-"name"               =>"Dronningens Gate"
-},
-"arrival_time"            =>            {
-"text"               =>"1:23               pm",
-"time_zone"               =>"Europe/Oslo",
-"value"               =>1525000980
-},
-"departure_stop"            =>            {
-"location"               =>               {
-"lat"                  =>59.916294,
-"lng"                  =>10.757193
-},
-"name"               =>"Hausmanns gate"
-},
-"departure_time"            =>            {
-"text"               =>"1:19               pm",
-"time_zone"               =>"Europe/Oslo",
-"value"               =>1525000740
-},
-"headsign"            =>"Majorstuen",
-"line"            =>            {
-"agencies"               =>               [
-{
-"name"                     =>"RuterTrikk",
-"url"                     =>"http://www.ruter.no/"
-}
-],
-"color"               =>"#ffffff",
-"name"               =>"Kjelsås - Majorstuen",
-"short_name"               =>"12",
-"text_color"               =>"#000000",
-"vehicle"               =>               {
-"icon"                  =>"//maps.gstatic.com/mapfiles/transit/iw2/6/tram2.png",
-"name"                  =>"Tram",
-"type"                  =>"TRAM"
-}
-},
-"num_stops"            =>3
-},
-"travel_mode"         =>"TRANSIT"
-},
-{
-"distance"         =>         {
-"text"            =>"0.1 km",
-"value"            =>140
-},
-"duration"         =>         {
-"text"            =>"2 mins",
-"value"            =>110
-},
-"end_location"         =>         {
-"lat"            =>59.91124660000001,
-"lng"            =>10.7447117
-},
-"html_instructions"         =>"Walk to Kirkegata 24,
-0107         Oslo,
-Norway",
-"polyline"         =>         {
-"points"            =>"shtlJ_
-}         q`A?@BDO|@SnA
-]      xB      [
-zB         [
-Y"
-},
-"start_location"         =>         {
-"lat"            =>59.91066,
-"lng"            =>10.746558
-},
-"steps"         =>         [
-{
-"distance"               =>               {
-"text"                  =>"3 m",
-"value"                  =>3
-},
-"duration"               =>               {
-"text"                  =>"1 min",
-"value"                  =>2
-},
-"end_location"               =>               {
-"lat"                  =>59.91063800000001,
-"lng"                  =>10.746523
-},
-"html_instructions"               =>"Head <b>southwest</b> on <b>Dronningens gate</b> toward <b>Prinsens gate</b>",
-"polyline"               =>               {
-"points"                  =>"shtlJ_
-}               q`A?@BD"
-},
-"start_location"            =>            {
-"lat"               =>59.91066,
-"lng"               =>10.746558
-},
-"travel_mode"            =>"WALKING"
-},
-{
-"distance"            =>            {
-"text"               =>"0.1 km",
-"value"               =>120
-},
-"duration"            =>            {
-"text"               =>"2 mins",
-"value"               =>95
-},
-"end_location"            =>            {
-"lat"               =>59.911112,
-"lng"               =>10.7445804
-},
-"html_instructions"            =>"Turn <b>right</b> onto <b>Prinsens gate</b>",
-"maneuver"            =>"turn-right",
-"polyline"            =>            {
-"points"               =>"ohtlJw|q`AO|@SnA
-]            xB            [
-zB"
-},
-"start_location"            =>            {
-"lat"               =>59.91063800000001,
-"lng"               =>10.746523
-},
-"travel_mode"            =>"WALKING"
-},
-{
-"distance"            =>            {
-"text"               =>"17 m",
-"value"               =>17
-},
-"duration"            =>            {
-"text"               =>"1 min",
-"value"               =>13
-},
-"end_location"            =>            {
-"lat"               =>59.91124660000001,
-"lng"               =>10.7447117
-},
-"html_instructions"            =>"Turn <b>right</b> onto <b>Kirkegata</b><div style=\"font-size:0.9e            m\">Destination will be on the right</div>",
-"maneuver"            =>"turn-right",
-"polyline"            =>            {
-"points"               =>"mktlJspq`A               [
-Y"
-},
-"start_location"               =>               {
-"lat"                  =>59.911112,
-"lng"                  =>10.7445804
-},
-"travel_mode"               =>"WALKING"
-}
-],
-"travel_mode"         =>"WALKING"
-}
-],
-"traffic_speed_entry"   =>   [
-
-],
-"via_waypoint"   =>   [
-
-]
-}
-],
-"overview_polyline"=>{
-"points"=>"skulJkot`AdAt@XZ`At@[
-dB   {
-@zDm@fB
-]   c@CNNRfA~Af@bAv@lCnAtElBpHVjAzA`IVlAHTHPHNHBJCHCb@
-]rAyA\\YNH~@|@jEbEXPR?LKZcAN[
-JINEHDTRN^JZR^n@v@x@v@t@z@FR@^a@hCo@~Dg@|CCFGFIDIAyAqAEQAOMBBDO|@q@hE   [
-zB      [
-Y"
-},
-"summary"      =>"",
-"warnings"      =>      [
-"Walking directions are in beta. Use caution – This route may be missing sidewalks or pedestrian paths."
-],
-"waypoint_order"      =>      [
-
-]
-}
-],
-"status"=>"OK"
+  "geocoded_waypoints" : [
+    {
+      "geocoder_status" : "OK",
+      "place_id" : "ChIJOT-_V2BuQUYRtUQG33il1iI",
+      "types" : [ "establishment", "point_of_interest", "university" ]
+    },
+    {
+      "geocoder_status" : "OK",
+      "place_id" : "ChIJ5U5Nz2VuQUYRphp4u9GoAHY",
+      "types" : [ "route" ]
+    }
+  ],
+  "routes" : [
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 59.924519,
+          "lng" : 10.7597385
+        },
+        "southwest" : {
+          "lat" : 59.9154466,
+          "lng" : 10.7505209
+        }
+      },
+      "copyrights" : "Kartdata ©2018 Google",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "20:46",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526150785
+          },
+          "departure_time" : {
+            "text" : "20:34",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526150049
+          },
+          "distance" : {
+            "text" : "1,6 km",
+            "value" : 1552
+          },
+          "duration" : {
+            "text" : "12 min",
+            "value" : 736
+          },
+          "end_address" : "Vulkan, Oslo, Norge",
+          "end_location" : {
+            "lat" : 59.92241689999999,
+            "lng" : 10.7516826
+          },
+          "start_address" : "Chr. Krohgs gate 32, 0186 Oslo, Norge",
+          "start_location" : {
+            "lat" : 59.916265,
+            "lng" : 10.7597385
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0,5 km",
+                "value" : 531
+              },
+              "duration" : {
+                "text" : "7 min",
+                "value" : 411
+              },
+              "end_location" : {
+                "lat" : 59.91814,
+                "lng" : 10.75357
+              },
+              "html_instructions" : "Gå til Jakob kirke",
+              "polyline" : {
+                "points" : "skulJkot`AdAt@XZ`At@[dB]~A]zA_@pAMTKVGHQZCB]r@mAhCILOZYn@[l@s@vAU\\Y~@ELM\\m@lAEJAC"
+              },
+              "start_location" : {
+                "lat" : 59.916265,
+                "lng" : 10.7597385
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 99
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 71
+                  },
+                  "end_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "html_instructions" : "Gå \u003cb\u003esør\u003c/b\u003e på \u003cb\u003eChr. Krohgs gate\u003c/b\u003e mot \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "skulJkot`AdAt@XZ`At@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.916265,
+                    "lng" : 10.7597385
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,4 km",
+                    "value" : 432
+                  },
+                  "duration" : {
+                    "text" : "6 min",
+                    "value" : 340
+                  },
+                  "end_location" : {
+                    "lat" : 59.91814,
+                    "lng" : 10.75357
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "qfulJckt`A[dB]~A]zA_@pAMTKVGHQZCB]r@mAhCILOZYn@[l@s@vAU\\Y~@ELM\\m@lAEJAC"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "0,7 km",
+                "value" : 734
+              },
+              "duration" : {
+                "text" : "2 min",
+                "value" : 120
+              },
+              "end_location" : {
+                "lat" : 59.924519,
+                "lng" : 10.750633
+              },
+              "html_instructions" : "Buss mot Kjelsås stasjon",
+              "polyline" : {
+                "points" : "kwulJyhs`AqObLiVfD"
+              },
+              "start_location" : {
+                "lat" : 59.91814,
+                "lng" : 10.75357
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 59.924519,
+                    "lng" : 10.750633
+                  },
+                  "name" : "Telthusbakken"
+                },
+                "arrival_time" : {
+                  "text" : "20:43",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150580
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 59.91814,
+                    "lng" : 10.75357
+                  },
+                  "name" : "Jakob kirke"
+                },
+                "departure_time" : {
+                  "text" : "20:41",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150460
+                },
+                "headsign" : "Kjelsås stasjon",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "RuterBuss",
+                      "url" : "http://www.ruter.no/"
+                    }
+                  ],
+                  "color" : "#ffffff",
+                  "name" : "Tjuvholmen - Kjelsås stasjon",
+                  "short_name" : "54",
+                  "text_color" : "#000000",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/bus2.png",
+                    "name" : "Buss",
+                    "type" : "BUS"
+                  }
+                },
+                "num_stops" : 2
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0,3 km",
+                "value" : 287
+              },
+              "duration" : {
+                "text" : "3 min",
+                "value" : 203
+              },
+              "end_location" : {
+                "lat" : 59.92241689999999,
+                "lng" : 10.7516826
+              },
+              "html_instructions" : "Gå til Vulkan, Oslo, Norge",
+              "polyline" : {
+                "points" : "g_wlJmvr`AFTxBk@f@GVU?}AB_A@UBSFMJIF?HBXDt@PjAVTL"
+              },
+              "start_location" : {
+                "lat" : 59.924519,
+                "lng" : 10.750633
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 106
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 77
+                  },
+                  "end_location" : {
+                    "lat" : 59.9235473,
+                    "lng" : 10.7508943
+                  },
+                  "html_instructions" : "Gå \u003cb\u003esør\u003c/b\u003e på \u003cb\u003eMaridalsveien\u003c/b\u003e mot \u003cb\u003eTelthusbakken\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "g_wlJmvr`AFTxBk@f@GVU"
+                  },
+                  "start_location" : {
+                    "lat" : 59.924519,
+                    "lng" : 10.750633
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 181
+                  },
+                  "duration" : {
+                    "text" : "2 min",
+                    "value" : 126
+                  },
+                  "end_location" : {
+                    "lat" : 59.92241689999999,
+                    "lng" : 10.7516826
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "eyvlJaxr`A?}AB_A@UBSFMJIF?HBXDt@PjAVTL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9235473,
+                    "lng" : 10.7508943
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "skulJkot`AdAt@XZ`At@[dB{@zDm@fBi@`AeCfFu@|AiAtB_@lA{@jBEJACqObLiVfDFTxBk@f@GVU?}AB_ADi@RWPBnAVjAVTL"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Veibeskrivelser for fotgjengere er i betaversjon. Vær forsiktig – denne ruten kan mangle fortau eller gangveier."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 59.9225267,
+          "lng" : 10.7600085
+        },
+        "southwest" : {
+          "lat" : 59.916265,
+          "lng" : 10.7516826
+        }
+      },
+      "copyrights" : "Kartdata ©2018 Google",
+      "legs" : [
+        {
+          "distance" : {
+            "text" : "1,0 km",
+            "value" : 1014
+          },
+          "duration" : {
+            "text" : "13 min",
+            "value" : 801
+          },
+          "end_address" : "Vulkan, Oslo, Norge",
+          "end_location" : {
+            "lat" : 59.92241689999999,
+            "lng" : 10.7516826
+          },
+          "start_address" : "Chr. Krohgs gate 32, 0186 Oslo, Norge",
+          "start_location" : {
+            "lat" : 59.916265,
+            "lng" : 10.7597385
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "1,0 km",
+                "value" : 1014
+              },
+              "duration" : {
+                "text" : "13 min",
+                "value" : 801
+              },
+              "end_location" : {
+                "lat" : 59.92241689999999,
+                "lng" : 10.7516826
+              },
+              "html_instructions" : "Gå til Vulkan, Oslo, Norge",
+              "polyline" : {
+                "points" : "skulJkot`AUOe@YMCSGg@BGPGHIJQJQLGFIJEHEHQd@Ur@ALG^Kn@U`AEXEd@?HEZCJ?D?F?F?p@Bd@@n@@`@ALEPCJINGNEPMPIH?@KJMPOPIJEDE@M@O?}@GY?QNGJETCTAT?^@b@?L?v@EF_@?M?Q@c@?S?m@@W@e@@m@@{@?]?ALUAuE|DIJQTEV@|CKbCTL"
+              },
+              "start_location" : {
+                "lat" : 59.916265,
+                "lng" : 10.7597385
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 170
+                  },
+                  "duration" : {
+                    "text" : "2 min",
+                    "value" : 128
+                  },
+                  "end_location" : {
+                    "lat" : 59.9175852,
+                    "lng" : 10.7590093
+                  },
+                  "html_instructions" : "Gå \u003cb\u003enord\u003c/b\u003e på \u003cb\u003eChr. Krohgs gate\u003c/b\u003e mot \u003cb\u003eSlåmotgangen\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "skulJkot`AUOe@YMCSGg@BGPGHIJQJQLGFIJEHEHQd@Ur@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.916265,
+                    "lng" : 10.7597385
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "73 m",
+                    "value" : 73
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 57
+                  },
+                  "end_location" : {
+                    "lat" : 59.9178672,
+                    "lng" : 10.7578425
+                  },
+                  "html_instructions" : "Fortsett rett frem ut på \u003cb\u003eAxel Maurers vei\u003c/b\u003e",
+                  "maneuver" : "straight",
+                  "polyline" : {
+                    "points" : "}sulJyjt`AALG^Kn@U`AEXEd@?H"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9175852,
+                    "lng" : 10.7590093
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,3 km",
+                    "value" : 297
+                  },
+                  "duration" : {
+                    "text" : "4 min",
+                    "value" : 241
+                  },
+                  "end_location" : {
+                    "lat" : 59.91926640000001,
+                    "lng" : 10.7545853
+                  },
+                  "html_instructions" : "Hold til \u003cb\u003ehøyre\u003c/b\u003e mot \u003cb\u003eNedre gate\u003c/b\u003e",
+                  "maneuver" : "turn-slight-right",
+                  "polyline" : {
+                    "points" : "uuulJoct`AEZCJ?D?F?F?p@Bd@@n@@`@ALEPCJINGNEPMPIH?@KJMPOPIJEDE@M@O?}@GY?QNGJETCTAT?^@b@?L?v@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9178672,
+                    "lng" : 10.7578425
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 207
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 181
+                  },
+                  "end_location" : {
+                    "lat" : 59.9211236,
+                    "lng" : 10.7545012
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eNedre gate\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "m~ulJeos`AEF_@?M?Q@c@?S?m@@W@e@@m@@{@?]?"
+                  },
+                  "start_location" : {
+                    "lat" : 59.91926640000001,
+                    "lng" : 10.7545853
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "4 m",
+                    "value" : 4
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 4
+                  },
+                  "end_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eGrünerbrua\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "_jvlJsns`AAL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9211236,
+                    "lng" : 10.7545012
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 250
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 181
+                  },
+                  "end_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "html_instructions" : "Ta til \u003cb\u003ehøyre\u003c/b\u003e mot \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "ajvlJens`AUAuE|DIJQTEV@|CKbC"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "13 m",
+                    "value" : 13
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 9
+                  },
+                  "end_location" : {
+                    "lat" : 59.92241689999999,
+                    "lng" : 10.7516826
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "yrvlJm}r`ATL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "skulJkot`A{@i@a@Kg@BGPQTc@XQRs@lBIl@a@pBQdBC`@FhDG^MZM`@WZi@p@OPSBmAGY?QNM`@Ej@@hCEF_@?_@@}BBmDBALUA_FhEQTEV@|CKbCTL"
+      },
+      "summary" : "Chr. Krohgs gate",
+      "warnings" : [
+        "Veibeskrivelser for fotgjengere er i betaversjon. Vær forsiktig – denne ruten kan mangle fortau eller gangveier."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 59.9225267,
+          "lng" : 10.7597385
+        },
+        "southwest" : {
+          "lat" : 59.9154466,
+          "lng" : 10.7516826
+        }
+      },
+      "copyrights" : "Kartdata ©2018 Google",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "20:48",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526150930
+          },
+          "departure_time" : {
+            "text" : "20:36",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526150194
+          },
+          "distance" : {
+            "text" : "1,4 km",
+            "value" : 1382
+          },
+          "duration" : {
+            "text" : "12 min",
+            "value" : 736
+          },
+          "end_address" : "Vulkan, Oslo, Norge",
+          "end_location" : {
+            "lat" : 59.92241689999999,
+            "lng" : 10.7516826
+          },
+          "start_address" : "Chr. Krohgs gate 32, 0186 Oslo, Norge",
+          "start_location" : {
+            "lat" : 59.916265,
+            "lng" : 10.7597385
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0,3 km",
+                "value" : 280
+              },
+              "duration" : {
+                "text" : "4 min",
+                "value" : 215
+              },
+              "end_location" : {
+                "lat" : 59.916435,
+                "lng" : 10.757505
+              },
+              "html_instructions" : "Gå til Hausmanns gate",
+              "polyline" : {
+                "points" : "skulJkot`AdAt@XZ`At@[dB]~A]zA_@pAMTgAuAF@"
+              },
+              "start_location" : {
+                "lat" : 59.916265,
+                "lng" : 10.7597385
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 99
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 71
+                  },
+                  "end_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "html_instructions" : "Gå \u003cb\u003esør\u003c/b\u003e på \u003cb\u003eChr. Krohgs gate\u003c/b\u003e mot \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "skulJkot`AdAt@XZ`At@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.916265,
+                    "lng" : 10.7597385
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 133
+                  },
+                  "duration" : {
+                    "text" : "2 min",
+                    "value" : 104
+                  },
+                  "end_location" : {
+                    "lat" : 59.91611570000001,
+                    "lng" : 10.7570856
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "qfulJckt`A[dB]~A]zA_@pAMT"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "48 m",
+                    "value" : 48
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 40
+                  },
+                  "end_location" : {
+                    "lat" : 59.916435,
+                    "lng" : 10.757505
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eStorgata\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStedet du skal til, er på høyre hånd\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "wjulJy~s`AgAuAF@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.91611570000001,
+                    "lng" : 10.7570856
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "0,5 km",
+                "value" : 534
+              },
+              "duration" : {
+                "text" : "2 min",
+                "value" : 120
+              },
+              "end_location" : {
+                "lat" : 59.920826,
+                "lng" : 10.759419
+              },
+              "html_instructions" : "Trikk mot Kjelsås",
+              "polyline" : {
+                "points" : "wlulJmat`ACN_@i@cA}A{A{Bc@i@WWUYQUOSEGMGQC[BU@SDi@LGBe@B]BiABwAB_@@_A@qA??a@"
+              },
+              "start_location" : {
+                "lat" : 59.916435,
+                "lng" : 10.757505
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 59.920826,
+                    "lng" : 10.759419
+                  },
+                  "name" : "Schous plass"
+                },
+                "arrival_time" : {
+                  "text" : "20:42",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150520
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 59.916435,
+                    "lng" : 10.757505
+                  },
+                  "name" : "Hausmanns gate"
+                },
+                "departure_time" : {
+                  "text" : "20:40",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150400
+                },
+                "headsign" : "Kjelsås",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "RuterTrikk",
+                      "url" : "http://www.ruter.no/"
+                    }
+                  ],
+                  "color" : "#ffffff",
+                  "name" : "Kjelsås - Majorstuen",
+                  "short_name" : "11",
+                  "text_color" : "#000000",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/tram2.png",
+                    "name" : "Trikk",
+                    "type" : "TRAM"
+                  }
+                },
+                "num_stops" : 1
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0,6 km",
+                "value" : 568
+              },
+              "duration" : {
+                "text" : "7 min",
+                "value" : 409
+              },
+              "end_location" : {
+                "lat" : 59.92241689999999,
+                "lng" : 10.7516826
+              },
+              "html_instructions" : "Gå til Vulkan, Oslo, Norge",
+              "polyline" : {
+                "points" : "ehvlJkmt`AHR]@]??J?xA?rA?N?fAAjBAjC?fA?rB?NCjFALUAuE|DIJQTEV@|CKbCTL"
+              },
+              "start_location" : {
+                "lat" : 59.920826,
+                "lng" : 10.759419
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "33 m",
+                    "value" : 33
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 25
+                  },
+                  "end_location" : {
+                    "lat" : 59.92107960000001,
+                    "lng" : 10.759307
+                  },
+                  "html_instructions" : "Gå \u003cb\u003enord\u003c/b\u003e på \u003cb\u003eThorvald Meyers gate\u003c/b\u003e mot \u003cb\u003eNordre gate\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "ehvlJkmt`AHR]@]?"
+                  },
+                  "start_location" : {
+                    "lat" : 59.920826,
+                    "lng" : 10.759419
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,3 km",
+                    "value" : 272
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 194
+                  },
+                  "end_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eNordre gate\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "wivlJult`A?J?xA?rA?N?fAAjBAjC?fA?rB?NCjFAL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.92107960000001,
+                    "lng" : 10.759307
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 250
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 181
+                  },
+                  "end_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "html_instructions" : "Ta til \u003cb\u003ehøyre\u003c/b\u003e mot \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "ajvlJens`AUAuE|DIJQTEV@|CKbC"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "13 m",
+                    "value" : 13
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 9
+                  },
+                  "end_location" : {
+                    "lat" : 59.92241689999999,
+                    "lng" : 10.7516826
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "yrvlJm}r`ATL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "skulJkot`AdAt@XZ`At@[dB{@zDm@fBgAuAF@CN_@i@_DyE{@aA}@kAMGQC[Bi@Fq@PcAFaDF_BBqA??a@HR]@]??J?lD?vACrLCzFALUA_FhEQTEV@|CKbCTL"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Veibeskrivelser for fotgjengere er i betaversjon. Vær forsiktig – denne ruten kan mangle fortau eller gangveier."
+      ],
+      "waypoint_order" : []
+    },
+    {
+      "bounds" : {
+        "northeast" : {
+          "lat" : 59.9225267,
+          "lng" : 10.7597385
+        },
+        "southwest" : {
+          "lat" : 59.9154466,
+          "lng" : 10.7516826
+        }
+      },
+      "copyrights" : "Kartdata ©2018 Google",
+      "legs" : [
+        {
+          "arrival_time" : {
+            "text" : "20:53",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526151230
+          },
+          "departure_time" : {
+            "text" : "20:41",
+            "time_zone" : "Europe/Oslo",
+            "value" : 1526150494
+          },
+          "distance" : {
+            "text" : "1,4 km",
+            "value" : 1382
+          },
+          "duration" : {
+            "text" : "12 min",
+            "value" : 736
+          },
+          "end_address" : "Vulkan, Oslo, Norge",
+          "end_location" : {
+            "lat" : 59.92241689999999,
+            "lng" : 10.7516826
+          },
+          "start_address" : "Chr. Krohgs gate 32, 0186 Oslo, Norge",
+          "start_location" : {
+            "lat" : 59.916265,
+            "lng" : 10.7597385
+          },
+          "steps" : [
+            {
+              "distance" : {
+                "text" : "0,3 km",
+                "value" : 280
+              },
+              "duration" : {
+                "text" : "4 min",
+                "value" : 215
+              },
+              "end_location" : {
+                "lat" : 59.916435,
+                "lng" : 10.757505
+              },
+              "html_instructions" : "Gå til Hausmanns gate",
+              "polyline" : {
+                "points" : "skulJkot`AdAt@XZ`At@[dB]~A]zA_@pAMTgAuAF@"
+              },
+              "start_location" : {
+                "lat" : 59.916265,
+                "lng" : 10.7597385
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 99
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 71
+                  },
+                  "end_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "html_instructions" : "Gå \u003cb\u003esør\u003c/b\u003e på \u003cb\u003eChr. Krohgs gate\u003c/b\u003e mot \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "skulJkot`AdAt@XZ`At@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.916265,
+                    "lng" : 10.7597385
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,1 km",
+                    "value" : 133
+                  },
+                  "duration" : {
+                    "text" : "2 min",
+                    "value" : 104
+                  },
+                  "end_location" : {
+                    "lat" : 59.91611570000001,
+                    "lng" : 10.7570856
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eHausmanns gate\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "qfulJckt`A[dB]~A]zA_@pAMT"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9154466,
+                    "lng" : 10.7590577
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "48 m",
+                    "value" : 48
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 40
+                  },
+                  "end_location" : {
+                    "lat" : 59.916435,
+                    "lng" : 10.757505
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil høyre\u003c/b\u003e og inn på \u003cb\u003eStorgata\u003c/b\u003e\u003cdiv style=\"font-size:0.9em\"\u003eStedet du skal til, er på høyre hånd\u003c/div\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "wjulJy~s`AgAuAF@"
+                  },
+                  "start_location" : {
+                    "lat" : 59.91611570000001,
+                    "lng" : 10.7570856
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            },
+            {
+              "distance" : {
+                "text" : "0,5 km",
+                "value" : 534
+              },
+              "duration" : {
+                "text" : "2 min",
+                "value" : 120
+              },
+              "end_location" : {
+                "lat" : 59.920826,
+                "lng" : 10.759419
+              },
+              "html_instructions" : "Trikk mot Storo-Grefsen stasjon",
+              "polyline" : {
+                "points" : "wlulJmat`ACN_@i@cA}A{A{Bc@i@WWUYQUOSEGMGQC[BU@SDi@LGBe@B]BiABwAB_@@_A@qA??a@"
+              },
+              "start_location" : {
+                "lat" : 59.916435,
+                "lng" : 10.757505
+              },
+              "transit_details" : {
+                "arrival_stop" : {
+                  "location" : {
+                    "lat" : 59.920826,
+                    "lng" : 10.759419
+                  },
+                  "name" : "Schous plass"
+                },
+                "arrival_time" : {
+                  "text" : "20:47",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150820
+                },
+                "departure_stop" : {
+                  "location" : {
+                    "lat" : 59.916435,
+                    "lng" : 10.757505
+                  },
+                  "name" : "Hausmanns gate"
+                },
+                "departure_time" : {
+                  "text" : "20:45",
+                  "time_zone" : "Europe/Oslo",
+                  "value" : 1526150700
+                },
+                "headsign" : "Storo-Grefsen stasjon",
+                "line" : {
+                  "agencies" : [
+                    {
+                      "name" : "RuterTrikk",
+                      "url" : "http://www.ruter.no/"
+                    }
+                  ],
+                  "color" : "#ffffff",
+                  "name" : "Solli/Frogner plass - Lilleaker/Bekkestua",
+                  "short_name" : "13",
+                  "text_color" : "#000000",
+                  "vehicle" : {
+                    "icon" : "//maps.gstatic.com/mapfiles/transit/iw2/6/tram2.png",
+                    "name" : "Trikk",
+                    "type" : "TRAM"
+                  }
+                },
+                "num_stops" : 1
+              },
+              "travel_mode" : "TRANSIT"
+            },
+            {
+              "distance" : {
+                "text" : "0,6 km",
+                "value" : 568
+              },
+              "duration" : {
+                "text" : "7 min",
+                "value" : 409
+              },
+              "end_location" : {
+                "lat" : 59.92241689999999,
+                "lng" : 10.7516826
+              },
+              "html_instructions" : "Gå til Vulkan, Oslo, Norge",
+              "polyline" : {
+                "points" : "ehvlJkmt`AHR]@]??J?xA?rA?N?fAAjBAjC?fA?rB?NCjFALUAuE|DIJQTEV@|CKbCTL"
+              },
+              "start_location" : {
+                "lat" : 59.920826,
+                "lng" : 10.759419
+              },
+              "steps" : [
+                {
+                  "distance" : {
+                    "text" : "33 m",
+                    "value" : 33
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 25
+                  },
+                  "end_location" : {
+                    "lat" : 59.92107960000001,
+                    "lng" : 10.759307
+                  },
+                  "html_instructions" : "Gå \u003cb\u003enord\u003c/b\u003e på \u003cb\u003eThorvald Meyers gate\u003c/b\u003e mot \u003cb\u003eNordre gate\u003c/b\u003e",
+                  "polyline" : {
+                    "points" : "ehvlJkmt`AHR]@]?"
+                  },
+                  "start_location" : {
+                    "lat" : 59.920826,
+                    "lng" : 10.759419
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,3 km",
+                    "value" : 272
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 194
+                  },
+                  "end_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eNordre gate\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "wivlJult`A?J?xA?rA?N?fAAjBAjC?fA?rB?NCjFAL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.92107960000001,
+                    "lng" : 10.759307
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "0,2 km",
+                    "value" : 250
+                  },
+                  "duration" : {
+                    "text" : "3 min",
+                    "value" : 181
+                  },
+                  "end_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "html_instructions" : "Ta til \u003cb\u003ehøyre\u003c/b\u003e mot \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-right",
+                  "polyline" : {
+                    "points" : "ajvlJens`AUAuE|DIJQTEV@|CKbC"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9211259,
+                    "lng" : 10.7544328
+                  },
+                  "travel_mode" : "WALKING"
+                },
+                {
+                  "distance" : {
+                    "text" : "13 m",
+                    "value" : 13
+                  },
+                  "duration" : {
+                    "text" : "1 min",
+                    "value" : 9
+                  },
+                  "end_location" : {
+                    "lat" : 59.92241689999999,
+                    "lng" : 10.7516826
+                  },
+                  "html_instructions" : "Sving \u003cb\u003etil venstre\u003c/b\u003e og inn på \u003cb\u003eVulkan\u003c/b\u003e",
+                  "maneuver" : "turn-left",
+                  "polyline" : {
+                    "points" : "yrvlJm}r`ATL"
+                  },
+                  "start_location" : {
+                    "lat" : 59.9225267,
+                    "lng" : 10.751748
+                  },
+                  "travel_mode" : "WALKING"
+                }
+              ],
+              "travel_mode" : "WALKING"
+            }
+          ],
+          "traffic_speed_entry" : [],
+          "via_waypoint" : []
+        }
+      ],
+      "overview_polyline" : {
+        "points" : "skulJkot`AdAt@XZ`At@[dB{@zDm@fBgAuAF@CN_@i@_DyE{@aA}@kAMGQC[Bi@Fq@PcAFaDF_BBqA??a@HR]@]??J?lD?vACrLCzFALUA_FhEQTEV@|CKbCTL"
+      },
+      "summary" : "",
+      "warnings" : [
+        "Veibeskrivelser for fotgjengere er i betaversjon. Vær forsiktig – denne ruten kan mangle fortau eller gangveier."
+      ],
+      "waypoint_order" : []
+    }
+  ],
+  "status" : "OK"
 }

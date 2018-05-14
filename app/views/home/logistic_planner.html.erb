@@ -5,28 +5,24 @@
 <!--        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>-->
 <!--      </iframe>-->
 <!--    </div>-->
-<div class="col-md-1"></div>
-<div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10 card card-header">
+<!--<div class="col-2 col-md-1 col-lg-1"></div>-->
+  <div class="card card-header logistic">
     <div class="card-body">
       <div class="row">
-        <%= form_tag '/logistics' do %>
-          <%= hidden_field_tag 'Mode', 'TRAM', id: 'mode' %>
-          <%= select_tag 'from', options_for_select(@from.collect {|b| [b.name, b.address]}, params[:from]), class: 'btn-dark', onChange: 'this.form.submit();' %>
-          <%= select_tag 'to', options_for_select(@to.collect {|b| [b.name, b.address]}, params[:to]), class: 'btn-dark', onChange: 'this.form.submit();' %>
+        <%= form_tag '/logistics', method: :get do %>
+          <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
+          <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
         <% end %>
       </div>
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-12 col-lg-6 logistic">
           <div id="map"></div>
         </div>
-        <div id="route_info" class="col-12 col-md-6">
+        <div id="route_info" class="col-12 col-md-12 col-lg-6 logistic">
             <%= render 'home/route_info' %>
         </div>
       </div>
     </div>
   </div>
-</div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=calculateRoute"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=initMap&libraries=geometry"
         async defer></script>
