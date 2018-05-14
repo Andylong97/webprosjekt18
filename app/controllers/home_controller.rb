@@ -23,7 +23,6 @@ class HomeController < ApplicationController
       @to.push(name: t.name, address: t.address)
     end
     @to.push(name: I18n.t('logistics.current_address'), address: "#{request.location.latitude},#{request.location.longitude}")
-    # @maps.city_bikes(request.remote_ip)
   end
 
   def brenneriveien; end
