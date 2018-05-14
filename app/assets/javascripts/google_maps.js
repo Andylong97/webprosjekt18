@@ -92,6 +92,7 @@ function removeLine() {
 
 function locateUser() {
     navigator.geolocation.getCurrentPosition(function(position) {
+        document.getElementById("location").innerText = "lat:" + position.coords.latitude + ", long:" + position.coords.longitude;
         return {
             lat: position.coords.latitude,
             lng: position.coords.longitude
