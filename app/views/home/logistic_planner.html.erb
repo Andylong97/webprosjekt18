@@ -20,6 +20,7 @@
             <%= label_tag t('from') %>
             <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
             <%= label_tag t('to') %>
+            <%= hidden_field_tag 'location' %>
             <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
           <% end %>
         </div>
