@@ -13,7 +13,8 @@
  */
 @import "home";
 @import "bootstrap";
-@import "web-fonts-with-css/css/fontawesome-all.css";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 @media (min-width: 756px) {
   body {
