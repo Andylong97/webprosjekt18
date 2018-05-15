@@ -33,8 +33,13 @@
               <p class="row"><%= leg.end_address %></p>
             </div>
             <div class="col-3">
-              <i class="row fas fa-clock"><p><%= step.duration %></p></i>
-              <i class="row fas fa-walking"><p><%= step.distance %></p></i>
+              <div class="row">
+                <i class="fas fa-clock"><%= step.duration %></i>
+              </div>
+              <div class="row">
+                <i class="fas fa-walking"><%= step.distance %></i>
+              </div>
+
             </div>
           </div>
           <div id="<%= "instructions#{instruction}" %>" class="collapse">
