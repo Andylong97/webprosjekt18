@@ -7,23 +7,15 @@ class HomeController < ApplicationController
   def index; end
 
   def logistic_planner
-    if params[:from].nil? && params[:to].nil?
+    if params[:from].nil? || params[:to].nil?
       params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
       params[:to] = 'Kirkegata+24,+Oslo'
     end
     @maps = ::GoogleMaps.new(params)
-    @directions = Directions.new(params, session)
-    @from = []
-    Location.where('NOT address LIKE ?', params[:to]).each do |f|
-      @from.push(name: f.name, address: f.address)
-    end
-    @from.push(name: I18n.t('logistics.current_address'), address: "#{request.location.latitude},#{request.location.longitude}")
-    @to = []
-    Location.where('NOT address LIKE ?', params[:from]).each do |t|
-      @to.push(name: t.name, address: t.address)
-    end
-    @to.push(name: I18n.t('logistics.current_address'), address: "#{request.location.latitude},#{request.location.longitude}")
-    # @maps.city_bikes(request.remote_ip)
+    @directions = Directions.new(params, session[:locale])
+    @from = Location.all_except(params[:to])
+    @to = Location.all_except(params[:from])
+    @all = Location.all
   end
 
   def brenneriveien; end
