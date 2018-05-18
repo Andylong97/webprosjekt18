@@ -19,7 +19,7 @@
         <%= form_tag '/logistics', method: :get do %>
           <%= label_tag "#{t('logistics.travel')} #{t('to')}" %>
           <%= hidden_field_tag 'location' %>
-          <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
+          <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]), class: 'btn-dark select-button', onChange: 'locateUser(); this.form.submit();' %>
         <% end %>
       </div>
     </div>
