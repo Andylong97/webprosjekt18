@@ -92,6 +92,6 @@ function removeLine() {
 
 function locateUser() {
     navigator.geolocation.getCurrentPosition(function(position) {
-        document.getElementById("location").value = "lat:" + position.coords.latitude + ", long:" + position.coords.longitude;
+        document.getElementById("location").value = position.coords.latitude + "," + position.coords.longitude;
     });
 }

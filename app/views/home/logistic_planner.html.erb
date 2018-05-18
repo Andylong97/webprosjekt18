@@ -12,7 +12,7 @@
         <button id="location" class="btn btn-dark" data-toggle="collapse" aria-controls="travel" data-target="#travel" aria-expanded="true">
           <%= "#{t('logistics.travel').capitalize} #{t('between')} campus" %>
         </button>
-        <button id="from-to" class="btn btn-dark" data-toggle="collapse" data-target="#travel2" aria-controls="travel2" aria-expanded="false">
+        <button id="from-to" onclick="locateUser();" class="btn btn-dark" data-toggle="collapse" data-target="#travel2" aria-controls="travel2" aria-expanded="false">
           <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
         </button>
         <div id="travel" class="row collapse <%= params[:position].nil? ? 'show' : '' %>" data-parent="#parent-travel">
@@ -20,13 +20,13 @@
             <%= label_tag t('from') %>
             <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
             <%= label_tag t('to') %>
-            <%= hidden_field_tag 'location' %>
             <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
           <% end %>
         </div>
         <div id="travel2" class="row collapse <%= params[:position].nil? ? '' : 'show' %>" data-parent="#parent-travel">
           <%= form_tag '/logistics', method: :get do %>
             <%= label_tag "#{t('logistics.travel')} #{t('to')}" %>
+            <%= hidden_field_tag 'location' %>
             <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
           <% end %>
         </div>

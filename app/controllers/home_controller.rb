@@ -7,7 +7,7 @@ class HomeController < ApplicationController
   def index; end
 
   def logistic_planner
-    if params[:from].nil? || params[:to].nil?
+    if params[:from].nil? && params[:to].nil?
       params[:from] = 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo'
       params[:to] = 'Kirkegata+24,+Oslo'
     end
@@ -16,6 +16,7 @@ class HomeController < ApplicationController
     @from = Location.all_except(params[:to])
     @to = Location.all_except(params[:from])
     @all = Location.all
+    # raise params.inspect
   end
 
   def brenneriveien; end
