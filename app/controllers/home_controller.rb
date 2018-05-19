@@ -4,7 +4,8 @@
 class HomeController < ApplicationController
   before_action :set_locale
 
-  def index; end
+  def index
+  end
 
   def logistic_planner
     if params[:from].nil? && params[:to].nil?
@@ -16,7 +17,6 @@ class HomeController < ApplicationController
     @from = Location.all_except(params[:to])
     @to = Location.all_except(params[:from])
     @all = Location.all
-    # raise params.inspect
   end
 
   def brenneriveien; end
@@ -28,7 +28,7 @@ class HomeController < ApplicationController
   def vulkan; end
 
   def kvadraturenalt
-    @bikes = GoogleMaps.new(params).city_bikes(request.location)
+    # @bikes = GoogleMaps.new(params).city_bikes(session[:latlong])
   end
 
   def change_locale
@@ -40,5 +40,10 @@ class HomeController < ApplicationController
 
   def set_locale
     I18n.locale = session[:locale]
+  end
+
+  def set_location
+    raise params[:latlong].inspect
+    session[:latlong] = params[:latlong]
   end
 end

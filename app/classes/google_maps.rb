@@ -20,12 +20,6 @@ class GoogleMaps
     JSON.parse(result.body)
   end
 
-  def stops
-    stopURI = URI('http://reisapi.ruter.no/Place/GetStopsRuter')
-    stops = Net::HTTP.get_response(stopURI)
-    stop = JSON.parse(stops.body)
-  end
-
   def route_info(stage)
     @proposal = []
     stage.each do |stages|
@@ -42,8 +36,7 @@ class GoogleMaps
   end
 
   def city_bikes(ip)
-    # coordinates = JSON.parse(Net::HTTP.get(URI("http://api.ipstack.com/#{ip}?access_key=d6286057971ebd4965e897f642bdb300")))
-    coordinates = JSON.parse(Net::HTTP.get(URI("http://api.ipstack.com/90.149.182.251?access_key=#{ENV['API_IPSTACK']}")))
+    coordinates = JSON.parse(Net::HTTP.get(URI("http://api.ipstack.com/#{ip}?access_key=d6286057971ebd4965e897f642bdb300")))
     center = [coordinates['longitude'], coordinates['latitude']]
     box = Geocoder::Calculations.bounding_box(center, 0.5)
     uri = URI("http://reisapi.ruter.no/Place/GetCityBikeStations?longmin=#{box[0]}&longmax=#{box[2]}&latmin=#{box[1]}&latmax=#{box[3]}")

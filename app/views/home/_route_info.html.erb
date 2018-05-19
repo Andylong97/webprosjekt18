@@ -19,29 +19,35 @@
 </div>
 <% instruction = 0 %>
 <% @directions.routes.each do |route| %>
-  <div class="card card-body" onclick="rute(<%= route.overview_polyline %>);">
+  <div id="route-card" class="card card-body" onclick="rute(<%= route.overview_polyline %>, <%= route.bounds %>);">
     <% route.legs.each do |leg| %>
       <% constructed = false %>
       <% leg.steps.each do |step| %>
         <% if leg.steps.size == 1 %>
-          <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false">
+          <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false" data-parent="#route-info">
             <div class="col-2 fas">
-              <i class="fas fa-arrow-down mt-4"></i>
+              <div class="row ml-2 ml-md-3 ml-lg-3 mt-4">
+                <i class="fas fa-walking"></i>
+              </div>
+              <div class="details row ml-1">
+                <i class="fas fa-angle-down"></i>
+                <p class="ml-2"><%= "Details" %></p>
+              </div>
             </div>
-            <div class="col-7 fas">
+            <div class="col-6 fas">
               <p class="row"><%= leg.start_address %></p>
               <p class="row"><%= leg.end_address %></p>
             </div>
-            <div class="col-3">
+            <div class="col-3 ml-2">
               <div class="row">
                 <i class="fas fa-clock"><%= step.duration %></i>
               </div>
-              <div class="row">
+              <div class="row mt-3">
                 <i class="fas fa-walking"><%= step.distance %></i>
               </div>
             </div>
           </div>
-          <div id="<%= "instructions#{instruction}" %>" class="collapse">
+          <div id="<%= "instructions#{instruction}" %>" class="collapse mt-3">
             <% number = 1 %>
             <% step.instructions.each do |instruct| %>
               <p class="fas row card-header"><%= "#{number}. #{instruct.instruction}" %></p>
@@ -51,8 +57,8 @@
         <% end %>
         <% if leg.steps.size > 1 %>
           <% unless step.transit? %>
-            <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false">
-              <div class="col-2 fas">
+            <div class="row" data-toggle="collapse" data-target="#<%= "instructions#{instruction}" %>" aria-expanded="false" data-parent="#route-info">
+              <div class="col-2 fas ml-2 ml-md-3 ml-lg-3 mt-2">
                 <% case step.vehicle %>
                 <% when 'BUS' %>
                   <i class="fas fa-bus mb-1"></i>
@@ -64,9 +70,12 @@
                   <i class="fas fa-subway mb-1"></i>
                   <p><%= step.short_name %></p>
                 <% end %>
-                <i class="fas fa-angle-down"></i>
+                <div class="details row ml-1">
+                  <i class="fas fa-angle-down"></i>
+                  <p class="ml-2"><%= "Details" %></p>
+                </div>
               </div>
-              <div class="col-7 fas">
+              <div class="col-6 fas">
                 <p class="row"><%= step.departure_stop %></p>
                 <p class="row"><%= step.arrival_stop %></p>
               </div>
@@ -80,17 +89,19 @@
           <% if constructed %>
           <div id="<%= "instructions#{instruction}" %>" class="collapse">
             <% num = 1 %>
+            <div class="row mt-3">
             <% leg.steps.each do |step_2| %>
-              <% unless step_2.transit? %>
-                <p class="fas row card-header"><%= "#{num}. #{step_2.instruction}" %> <br> <%= "#{t('logistics.arrival_stop')}: #{step_2.arrival_stop}" %></p>
-              <% else %>
-                <% step_2.instructions.each do |instruct| %>
-                  <p class="fas row card-header"><%= "#{num}. #{instruct.instruction}" %></p>
-                  <% num += 1 %>
+                <% unless step_2.transit? %>
+                  <p class="fas col-12 card-header"><%= "#{num}. #{step_2.instruction}" %> <br> <%= "#{t('logistics.arrival_stop')}: #{step_2.arrival_stop}" %></p>
+                <% else %>
+                  <% step_2.instructions.each do |instruct| %>
+                    <p class="fas col-12 card-header"><%= "#{num}. #{instruct.instruction}" %></p>
+                    <% num += 1 %>
+                  <% end %>
                 <% end %>
-              <% end %>
                 <% num += 1 %>
               <% end %>
+            </div>
           </div>
             <% end %>
         <% end %>

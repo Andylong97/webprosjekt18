@@ -5,7 +5,14 @@ class Routes
 
   def bounds
     bounds = @routes['bounds']
-    { northeast: "#{bounds['lat']},#{bounds['lng']}", southwest: "#{bounds['lat']},#{bounds['lng']}" }
+    { northeast: {
+      lat: (bounds['northeast']['lat']).to_s,
+      lng: (bounds['northeast']['lng']).to_s
+    },
+      southwest: {
+        lat: (bounds['southwest']['lat']).to_s,
+        lng: (bounds['southwest']['lng']).to_s
+      } }.to_json
   end
 
   def legs

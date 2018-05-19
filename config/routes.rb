@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get '/locale', to: 'home#change_locale'
 
+  get '/set_location', to: 'home#set_locale'
+
   root 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

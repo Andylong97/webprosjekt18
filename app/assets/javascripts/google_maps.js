@@ -57,7 +57,7 @@ function initMap() {
     });
 }
 
-function rute(list) {
+function rute(list, bounds) {
     removeLine();
     lines = [];
     for(let i = 0; i< list.length; i++){
@@ -81,6 +81,14 @@ function rute(list) {
         strokeOpacity: 1.0,
         strokeWeight: 5
     });
+
+    northeast = new google.maps.LatLng(bounds.northeast.lat, bounds.northeast.lng);
+    southwest = new google.maps.LatLng(bounds.southwest.lat, bounds.southwest.lng);
+    bounds = new google.maps.LatLngBounds();
+    bounds.extend(northeast);
+    bounds.extend(southwest);
+    map.fitBounds(bounds);
+    map.setCenter(bounds.getCenter());
     route.setMap(map);
 }
 
@@ -90,8 +98,8 @@ function removeLine() {
     }
 }
 
-function locateUser() {
+function locateUser(id) {
     navigator.geolocation.getCurrentPosition(function(position) {
-        document.getElementById("location").value = position.coords.latitude + "," + position.coords.longitude;
+        document.getElementById(id).value = position.coords.latitude + "," + position.coords.longitude;
     });
 }
