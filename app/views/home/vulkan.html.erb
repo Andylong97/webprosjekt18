@@ -1,58 +1,162 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Campus Vulkan</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-</head>
-<body>
-<div class="container">
-  <div class="row">
+<!-- BANNER -->
+<div id="banner_image_div">
+
+  <!-- BILDE HER -->
+  <%=image_tag'campus_vulkan.jpg',id:'campus_banner'%>
+
+  <!-- BANNER TEKST HER-->
+  <div class="container-fluid" id="banner_text_div">
+    <h1 id="klasse_tittel">Campus</h1>
+    <h2 id="campus_tittel">Vulkan</h2>
+    <p id="info_banner">Her finner du en Campus med et sort bygg med gule vinduskarmer. Bare et steinkast unna
+      Grunerløkka med sine
+      mange fristelser får du mange steder å hente inspirasjon til skolearbeidet.<br>ELLER LISTE OM FAKULTETER HER</p>
+  </div>
+
+</div>
+
+<!-- DELEN UNDER -->
+<div id="body_div">
+  <div class="container">
 
     <br>
+    <!-- INFO, TELEFON, ADRESSE-->
+    <h1 id="info_tittel">Info</h1>
 
-    <div class="col-md-4 offset-md-8">
+    <div class="row">
 
-      <button type="button">Annet</button>
-      <button type="button">Restauranter</button>
-      <button type="button">Dagligvarer</button>
 
+      <!-- TELEFON -->
+      <div class="col-md-4" id="info_div">
+
+        <h2 class="tittel-info">Telefon</h2>
+        <br>
+        <p>22 05 75 50</p>
+
+      </div>
+
+      <!-- ÅPNINGSTIDER -->
+      <div class="col-md-4" id="info_div">
+
+        <h2 class="tittel-info">Åpningstider</h2>
+        <br>
+        <ul>
+          <li class="campus_tittel">Resepsjonen er bemannet mandag-fredag 08.00-22.00</li>
+          <li class="campus_tittel">Byggets åpningstid: 08.00-22.00, lørdag 10.00-18.00 og søndag 10.00-20.00</li>
+          <li class="campus_tittel">Undervisning egen utdanning: I byggets åpningstid</li>
+          <li class="campus_tittel">Åpningstider biblotek: I byggets åpningstid</li>
+        </ul>
+
+      </div>
+
+      <!-- ADRESSE -->
+      <div class="col-md-4">
+
+        <h2 class="tittel-info">Adresse</h2>
+        <br>
+        <p id="campus_adresse">Vulkan 19<br>0178 Oslo<br>Norge</p>
+
+      </div>
 
     </div>
 
+    <div class="row justify-content-between">
 
-    <div class="col-md-5">
-      <h1 id="campus_tittel">Campus Vulkan</h1>
+      <!-- RØD BOKS KNAPPER -->
+      <div class="col-md-4" id="farge-div">
+
+        <h2 id="store-info-tittel">Nærområdet</h2>
+
+        <!-- KNAPP 1 -->
+        <button class="button">Matbutikker</button>
+
+        <ul>
+          <li>Matkroken</li>
+          <li>en til</li>
+          <li>pluss en til</li>
+
+        </ul>
+
+        <!-- KNAPP 2 -->
+        <button class="button">Spisesteder</button>
+
+        <ul>
+          <li>Steen &amp; Strøm</li>
+          <li>Ris Bolle</li>
+          <li>Subway</li>
+
+        </ul>
+
+        <!-- KNAPP 3 -->
+        <button class="button">Annet</button>
+
+        <ul>
+          <li>Matkroken</li>
+          <li>en til</li>
+          <li>pluss en til</li>
+
+        </ul>
 
 
-      <p id="campus_info">Her finner du en Campus med et sort bygg med gule vinduskarmer. Bare et steinkast unna Grunerløkka med sine
-        mange fristelser får du mange steder å hente inspirasjon til skolearbeidet.</p>
+      </div>
 
 
-      <h2>Åpningstider</h2>
-      <ul>
-        <li class="campus_tittel">Resepsjonen er bemannet mandag-fredag 08.00-22.00</li>
-        <li class="campus_tittel">Byggets åpningstid: 08.00-22.00, lørdag 10.00-18.00 og søndag 10.00-20.00</li>
-        <li class="campus_tittel">Undervisning egen utdanning: I byggets åpningstid</li>
-        <li class="campus_tittel">Åpningstider biblotek: I byggets åpningstid</li>
-      </ul>
-      <h2>Kontaktinfo</h2>
-      <p>Telefon: 22 05 75 50</p>
-      <p>Adresse: Vulkan 19,0178 Oslo</p>
+      <!-- KART-->
+      <div class="col-md-7">
+
+         <div id="map-div">
+
+           <!--KARTBILDE-->
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="col-md-7">
-      <%= image_tag '_N4A9392.jpg', id: 'campus_banner'%>
+    <div class="row">
+
+
+      <!-- AUDITORIUM -->
+      <div class="col-md-12">
+
+        <h2>Auditorium</h2>
+
+        <a href="https://no.timeedit.net/web/westerdals/db1/" class="offset-md-1">Info / Rom</a>
+
+      </div>
+
+
+      <!-- ANNEN EKSTRA INFO -->
+      <div class="col-md-12">
+
+        <h2 class="info_headline">Bibliotek</h2>
+        <p>Høyskolens bibliotek ligger i Vulkan 19 i 1 etasje.<br>
+          Åpningstider i hverdager fra 08-20, fredag fra 08-16.<br>
+          Helg fra 1030-17</p>
+
+      </div>
+
+
+      <!-- ANNEN EKSTRA INFO -->
+      <div class="col-md-12">
+
+        <h2 class="info_headline">Bokhandel</h2>
+
+        <h3 class="offset-md-1">Info</h3>
+
+      </div>
+
+
+
+    </div> <!-- END ROW -->
+
+    <!-- FOOTER -->
+    <div class="container-fluid" id="campus_footer">
+
     </div>
 
   </div>
 
-
-</div>
-</body>
-</html>
+</div> <!-- END CONTAINER-->
