@@ -141,3 +141,30 @@ li {
   text-decoration: underline;
   cursor: pointer;
 }
+
+.skew {
+  text-align: center;
+  background-color: buttonface;
+  border-left: black 1px solid;
+  border-right: black 1px solid;
+}
+
+#from-to {
+  border-top: black 1px dashed;
+  border-bottom: black 1px solid;
+}
+
+#travel_campus {
+  border-bottom: black 1px dashed;
+  border-top: black 1px solid;
+}
+
+#route-card:hover {
+  background-color: buttonface;
+}
+
+.details {
+  position: absolute;
+  bottom: -25px;
+  left: 0px;
+}

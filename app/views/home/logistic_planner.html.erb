@@ -1,46 +1,66 @@
-<!--    <div class="col-md-6">-->
-<!--      <iframe style="border: 0;"-->
-<!--              src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE &amp;destination=<%#= @til %>> &amp;origin=<%#= @fra %>> &amp;mode=transit" width="600" height="450" frameborder="0" allowfullscreen="allowfullscreen">-->
-<!--        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>-->
-<!--        <span data-mce-type="bookmark" style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" class="mce_SELRES_start">﻿</span>-->
-<!--      </iframe>-->
-<!--    </div>-->
-<!--<div class="col-2 col-md-1 col-lg-1"></div>-->
-  <div class="card card-header logistic">
-    <div class="card-body">
-      <div id="parent-travel">
-        <button id="travel_campus" class="btn btn-dark" data-toggle="collapse" aria-controls="travel" data-target="#travel" aria-expanded="true">
-          <%= "#{t('logistics.travel').capitalize} #{t('between')} campus" %>
-        </button>
-        <button id="from-to" onclick="locateUser();" class="btn btn-dark" data-toggle="collapse" data-target="#travel2" aria-controls="travel2" aria-expanded="false">
-          <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
-        </button>
-        <div id="travel" class="row collapse <%= params[:position].nil? ? 'show' : '' %>" data-parent="#parent-travel">
-          <%= form_tag '/logistics', method: :get do %>
-            <%= label_tag t('from') %>
-            <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
-            <%= label_tag t('to') %>
-            <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
-          <% end %>
+<div class="card card-header logistic">
+  <div class="card-body">
+    <div id="parent-travel" class="mb-2">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="skew btn-outline-dark">
+            <div class="logistic">
+              <div id="travel_campus" class="p-3" data-toggle="collapse" aria-controls="travel" data-target="#travel" aria-expanded="true">
+                <%= "#{t('logistics.travel').capitalize} #{t('between')} campus" %>
+              </div>
+            </div>
+          </div>
+          <div class="skew btn-outline-dark">
+            <div class="logistic">
+              <div id="from-to" class="p-3" onclick="locateUser('location');" data-toggle="collapse" data-target="#travel2" aria-controls="travel2" aria-expanded="false">
+                <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="travel2" class="row collapse <%= params[:position].nil? ? '' : 'show' %>" data-parent="#parent-travel">
-          <%= form_tag '/logistics', method: :get do %>
-            <%= label_tag "#{t('logistics.travel')} #{t('to')}" %>
-            <%= hidden_field_tag 'location' %>
-            <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]), class: 'btn-dark select-button', onChange: 'this.form.submit();' %>
-          <% end %>
+        <div class="col-12 col-md-6 col-lg-6">
+          <div class="row">
+            <div id="travel" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? 'show' : '' %>" data-parent="#parent-travel">
+              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-md-4' do %>
+                <div class="row">
+                  <div class="col-12 col-md-5 col-lg-5">
+                    <%= label_tag t('from') %>
+                    <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]),
+                                   class: 'btn select-button btn-outline-dark',
+                                   onChange: 'this.form.submit();' %>
+                  </div>
+                  <div class="col-12 col-md-5 col-lg-5">
+                    <%= label_tag t('to') %>
+                    <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]),
+                                   class: 'btn select-button btn-outline-dark',
+                                   onChange: 'this.form.submit();' %>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+            <div id="travel2" class="col-12 col-md-12 col-lg-12 collapse <%= params[:position].nil? ? '' : 'show' %>" data-parent="#parent-travel">
+              <%= form_tag '/logistics', method: :get, class: 'pl-5 pt-md-4' do %>
+                <%= hidden_field_tag 'location', params[:location] %>
+                <%= label_tag "#{t('logistics.travel')} #{t('to')}" %>
+                <%= select_tag 'position', options_for_select(@all.collect {|b| [b[:name], b[:address]]}, params[:position]),
+                               class: 'btn select-button btn-outline-dark',
+                               onChange: 'locateUser("location"); this.form.submit();' %>
+              <% end %>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-12 col-md-12 col-lg-6 logistic">
-          <div id="map"></div>
-        </div>
-        <div id="route_info" class="col-12 col-md-12 col-lg-6 logistic">
-            <%= render 'home/route_info' %>
-        </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-12 col-lg-6 logistic">
+        <div id="map"></div>
+      </div>
+      <div id="route_info" class="col-12 col-md-12 col-lg-6 logistic">
+        <%= render 'home/route_info' %>
       </div>
     </div>
   </div>
+</div>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&callback=initMap&libraries=geometry"
         async defer></script>
