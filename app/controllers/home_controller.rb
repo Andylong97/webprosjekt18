@@ -28,7 +28,7 @@ class HomeController < ApplicationController
   def vulkan; end
 
   def kvadraturenalt
-    # @bikes = GoogleMaps.new(params).city_bikes(session[:latlong])
+    @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
   end
 
   def change_locale

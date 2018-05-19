@@ -13,7 +13,7 @@ Location.create(name: 'Fjerdingen',
                 stop_id: '3010510',
                 coordinate: '(x=598298,y=6643380)')
 Location.create(name: 'Vulkan',
-                address: 'vulkan+oslo',
+                address: 'Westerdals,+Gruners+gate,+0175+Oslo',
                 stop_id: '3010512',
                 coordinate: '(x=597952,y=6644167)')
 Location.create(name: 'Brennerivegen',

@@ -1,10 +1,8 @@
 
 <!-- BANNER -->
 <div id="banner_image_div">
-
   <!-- BILDE HER -->
-  <%=image_tag'kvadraturen_banner.jpg',id:'campus_banner'%>
-
+  <%= image_tag'kvadraturen_banner.jpg',id:'campus_banner' %>
   <!-- BANNER TEKST HER-->
   <div class="container-fluid" id="banner_text_div">
     <h1 id="klasse_tittel">campus</h1>
@@ -12,141 +10,91 @@
     <p id="info_banner">Høyskolen Kristiania Oslo er en unik høyskole som holder til i moderne lokaler
       med historisk atmosfære midt i Oslo sentrum.<br>ELLER LISTE OM FAKULTETER HER</p>
   </div>
-
 </div>
-
 <!-- DELEN UNDER -->
 <div id="body_div">
 <div class="container">
-
   <br>
   <!-- INFO, TELEFON, ADRESSE-->
   <h1 id="info_tittel">Info</h1>
-
   <div class="row">
-
-
     <!-- TELEFON -->
     <div class="col-md-4" id="info_div">
-
       <h2 class="tittel-info">Telefon</h2>
       <p>225 96 000</p>
-
     </div>
-
     <!-- ÅPNINGSTIDER -->
     <div class="col-md-4" id="info_div">
-
       <h2 class="tittel-info">Åpningstider</h2>
       <p>Man–fre:      07.30 – 23.00<br>
         Lør–søn:      09.00 – 17.00</p>
-
     </div>
-
     <!-- ADRESSE -->
     <div class="col-md-4">
-
       <h2 class="tittel-info">Adresse</h2>
       <p id="campus_adresse">Kirkegata 24-26<br>0153 Oslo<br>Norge</p>
-
     </div>
-
   </div>
-
   <div class="row justify-content-between">
-
     <!-- RØD BOKS KNAPPER -->
     <div class="col-md-4" id="farge-div">
-
       <h2 id="store-info-tittel">Nærområdet</h2>
-
       <!-- KNAPP 1 -->
       <button class="button">Matbutikker</button>
-
       <ul>
         <li>Matkroken</li>
         <li>en til</li>
         <li>pluss en til</li>
-
       </ul>
-
       <!-- KNAPP 2 -->
       <button class="button">Spisesteder</button>
-
       <ul>
         <li>Steen &amp; Strøm</li>
         <li>Ris Bolle</li>
         <li>Subway</li>
-
       </ul>
-
       <!-- KNAPP 3 -->
       <button class="button">Annet</button>
-
       <ul>
         <li>Matkroken</li>
         <li>en til</li>
         <li>pluss en til</li>
-
       </ul>
-
-
     </div>
-
-
     <!-- KART-->
     <div class="col-md-7">
-<!--      <button onclick="city_bikes(<%#= @bikes[:center][1] %>, <%#= @bikes[:center][0] %>,<%#= @bikes[:body].to_json %>);">By-sykkel</button>-->
-      <div id="map"></div>
-
+      <div class="row">
+        <div class="btn btn-outline-dark col-4" onclick="city_bikes(<%= @bikes[:center][1] %>,<%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>);">By-sykkel</div>
+        <div class="btn btn-outline-dark col-4" onclick="places(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>);">Cafe</div>
+        <div class="btn btn-outline-dark col-4" onclick="campus()">Campus</div>
+      </div>
+      <div class="row">
+        <div id="map" class="col-12"></div>
+      </div>
     </div>
-
   </div>
-
   <div class="row">
-
-
     <!-- AUDITORIUM -->
     <div class="col-md-12">
-
       <h2>Auditorium</h2>
-
       <h3 class="offset-md-1">Info / Rom</h3>
-
     </div>
-
-
     <!-- ANNEN EKSTRA INFO -->
     <div class="col-md-12">
-
       <h2>Bibliotek</h2>
-
       <h3 class="offset-md-1">Adresse</h3>
-
     </div>
-
-
     <!-- ANNEN EKSTRA INFO -->
     <div class="col-md-12">
-
       <h2>Bokhandel</h2>
-
       <h3 class="offset-md-1">Info</h3>
-
     </div>
-
-
-
   </div> <!-- END ROW -->
-
   <!-- FOOTER -->
   <div class="container-fluid" id="campus_footer">
-
   </div>
-
   </div>
-
 </div> <!-- END CONTAINER-->
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=places"
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=campus"
         async defer></script>
