@@ -9,7 +9,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Location.create(name: 'Fjerdingen',
-                address: 'Westerdals+Oslo+ACT,+Chr.+Krohgs gate+32,+Oslo',
+                address: 'Westerdals+Oslo+ACT,+Chr.+Krohgs+gate+32,+Oslo',
                 stop_id: '3010510',
                 coordinate: '(x=598298,y=6643380)')
 Location.create(name: 'Vulkan',
