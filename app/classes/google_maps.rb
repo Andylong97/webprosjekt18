@@ -35,12 +35,10 @@ class GoogleMaps
     @proposal
   end
 
-  def city_bikes(ip)
-    coordinates = JSON.parse(Net::HTTP.get(URI("http://api.ipstack.com/#{ip}?access_key=d6286057971ebd4965e897f642bdb300")))
-    center = [coordinates['longitude'], coordinates['latitude']]
+  def city_bikes(coordinate)
+    center = [coordinate[:long], coordinate[:lat]]
     box = Geocoder::Calculations.bounding_box(center, 0.5)
     uri = URI("http://reisapi.ruter.no/Place/GetCityBikeStations?longmin=#{box[0]}&longmax=#{box[2]}&latmin=#{box[1]}&latmax=#{box[3]}")
-    puts "http://reisapi.ruter.no/Place/GetCityBikeStations?longmin=#{box[0]}&longmax=#{box[2]}&latmin=#{box[1]}&latmax=#{box[3]}"
     {
       body: JSON.parse(Net::HTTP.get(uri)),
       center: center
