@@ -25,21 +25,29 @@
 
 #banner_text_div {
   width: 100%;
-  position: fixed;
+  position: relative;
   top: 65%;
   left: 15%;
   z-index: 99;
 }
 
-@mediascreenand(max-width:767.98px){
+@media (min-width: 756px){
   #banner_image_div{
-    height:40%;
+    height:80%;
     right:0rem;
   }
 
   #banner_text_div{
-    top:45%;
+    top:65%;
   }
+}
+
+@media (max-width: 756px){
+  #banner_image_div{
+    height:35%;
+    right:0rem;
+  }
+
 }
 
 #klasse_tittel {
@@ -74,7 +82,7 @@
 
 #body_div {
   position: relative;
-  background-color: white;
+  background-color: #E9e7da;
   width: 100%;
   z-index: 100;
 }
@@ -96,9 +104,9 @@
 }
 
 #farge-div {
-  background-color: rgb(155, 68, 65);
+  background-color: #984843;
   height: 550px;
-  margin-top: 3rem;
+  //margin-top: 3rem;
 }
 
 #store-info-tittel {
@@ -133,10 +141,11 @@ li {
 
 .button {
   border: none;
-  background-color: rgb(155, 68, 65);;
+  background-color: #984843;
   color: white;
   font-size: 2rem;
   text-decoration: none;
+  text-align: left;
 }
 
 .button:hover {
@@ -169,4 +178,8 @@ li {
   position: absolute;
   bottom: -25px;
   left: 0px;
+}
+
+.outline-gold-hover:hover {
+  background-color: #CDA34F;
 }

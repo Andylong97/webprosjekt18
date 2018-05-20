@@ -23,7 +23,9 @@ class HomeController < ApplicationController
 
   def fjerdingen; end
 
-  def kvadraturen; end
+  def kvadraturen
+    @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
+  end
 
   def vulkan; end
 
