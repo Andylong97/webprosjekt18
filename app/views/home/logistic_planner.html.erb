@@ -1,16 +1,16 @@
-<div class="card card-header logistic">
+<div class="card card-header logistic background-daisy">
   <div class="card-body">
     <div id="parent-travel" class="mb-2">
       <div class="row">
-        <div class="col-12 col-md-6 col-lg-6">
-          <div class="skew btn-outline-dark">
+        <div class="col-12 col-md-6 col-lg-6 pl-md-0 pr-lg-0">
+          <div class="skew outline-gold-hover background_red">
             <div class="logistic">
               <div id="travel_campus" class="p-3" data-toggle="collapse" aria-controls="travel" data-target="#travel" aria-expanded="true">
                 <%= "#{t('logistics.travel').capitalize} #{t('between')} campus" %>
               </div>
             </div>
           </div>
-          <div class="skew btn-outline-dark">
+          <div class="skew outline-gold-hover background_red">
             <div class="logistic">
               <div id="from-to" class="p-3" onclick="locateUser('location');" data-toggle="collapse" data-target="#travel2" aria-controls="travel2" aria-expanded="false">
                 <%= "#{t('logistics.travel').capitalize} #{t('from')} #{t('logistics.my_location')}" %>
@@ -26,13 +26,13 @@
                   <div class="col-12 col-md-5 col-lg-5">
                     <%= label_tag t('from') %>
                     <%= select_tag 'from', options_for_select(@from.collect {|b| [b[:name], b[:address]]}, params[:from]),
-                                   class: 'btn select-button btn-outline-dark',
+                                   class: 'btn select-button background_red outline-gold-hover',
                                    onChange: 'this.form.submit();' %>
                   </div>
                   <div class="col-12 col-md-5 col-lg-5">
                     <%= label_tag t('to') %>
                     <%= select_tag 'to', options_for_select(@to.collect {|b| [b[:name], b[:address]]}, params[:to]),
-                                   class: 'btn select-button btn-outline-dark',
+                                   class: 'btn select-button background_red outline-gold-hover',
                                    onChange: 'this.form.submit();' %>
                   </div>
                 </div>
@@ -52,8 +52,8 @@
       </div>
 
     </div>
-    <div class="row">
-      <div class="col-12 col-md-12 col-lg-6 logistic">
+    <div class="row pt-md-3 pt-lg-3">
+      <div class="col-12 col-md-12 col-lg-6 pl-0 pr-0 border-red">
         <div id="map"></div>
       </div>
       <div id="route_info" class="col-12 col-md-12 col-lg-6 logistic">

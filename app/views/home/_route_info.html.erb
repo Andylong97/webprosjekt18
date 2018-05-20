@@ -1,4 +1,4 @@
-<div class="card card-header">
+<div class="card card-header background_red">
   <div class="row">
     <div class="card-body col-3">
       <h6><%= t('logistics.route') %></h6>
@@ -19,7 +19,7 @@
 </div>
 <% instruction = 0 %>
 <% @directions.routes.each do |route| %>
-  <div id="route-card" class="card card-body" onclick="rute(<%= route.overview_polyline %>, <%= route.bounds %>);">
+  <div class="card card-body background_red outline-gold-hover" onclick="rute(<%= route.overview_polyline %>, <%= route.bounds %>);">
     <% route.legs.each do |leg| %>
       <% constructed = false %>
       <% leg.steps.each do |step| %>

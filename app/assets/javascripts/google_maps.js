@@ -31,7 +31,7 @@ function rute(list, bounds) {
     route = new google.maps.Polyline({
         path: lines,
         geodesic: true,
-        strokeColor: '#0000FF',
+        strokeColor: '#984843',
         strokeOpacity: 1.0,
         strokeWeight: 5
     });

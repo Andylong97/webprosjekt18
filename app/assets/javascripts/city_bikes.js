@@ -1,7 +1,7 @@
 function city_bikes(lat, lng, markers) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: lat, lng: lng},
-        zoom: 14
+        zoom: 15
     });
     infoWindow = new google.maps.InfoWindow();
     for(let i = 0; i < markers.length; i++){
@@ -15,12 +15,12 @@ function city_bikes(lat, lng, markers) {
 function places(lat, long) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: lat, lng: long },
-        zoom: 14
+        zoom: 15
     });
 
     let request = {
         location: map.center,
-        radius: '500',
+        radius: '350',
         type: ['cafe']
     };
 
