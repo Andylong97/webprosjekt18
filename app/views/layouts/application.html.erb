@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bakgrunn-gold border-bunn">
   <div class="container-fluid">
     <a href="/index" id="logo_small">
       <%= render 'home/svg/logo_symbol_christiania' %>
@@ -32,10 +32,7 @@
           <a class="nav-link text-dark" href="/fjerdingen">Fjerdingen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="/vulkan">Vulkan</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="/brenneriveien">Brenneriveien</a>
+          <a class="nav-link text-dark" href="/vulkan">Vulkan & Brennerivegen</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark" href="/kvadraturen">Kvadraturen</a>
@@ -46,8 +43,15 @@
 
   </div>
 </nav>
-<div class="container-fluid logistic" style="height: 100%; width: 100%;">
+<div class="container-fluid-no-gutters logistic" style="height: 100%; width: 100%;">
   <%= yield %>
+  <footer class="footer" id="campus_footer">
+    <h1>Info</h1>
+    <p>Denne nettsiden er ikke offisiell. Dette er et potensielt fremtidig studentverktøy for studenter ved Høyskolen
+      Kristiania, laget i regi av Webprosjekt 2018.</p>
+
+  </footer>
 </div>
+
 </body>
 </html>

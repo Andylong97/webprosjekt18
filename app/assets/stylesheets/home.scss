@@ -4,16 +4,9 @@
 
 //------//
 
-
-#placeholder_nav_bar {
-  height: 10%;
-  width: 100%;
-  position: relative;
-}
-
 #banner_image_div {
   width: 100%;
-  height: 70%;
+  height: 80%;
   overflow: hidden;
   position: relative;
   right: 0.95rem;
@@ -23,20 +16,38 @@
 
 #campus_banner {
   width: 100%;
-  min-width: 100%;
-  min-height: 100%;
+  min-height: 30%;
   z-index: 99;
   position: fixed;
   filter: brightness(0.7);
-
+  transform: scale(1.2);
 }
 
 #banner_text_div {
   width: 100%;
-  position: fixed;
-  top: 70%;
+  position: relative;
+  top: 65%;
   left: 15%;
   z-index: 99;
+}
+
+@media (min-width: 756px){
+  #banner_image_div{
+    height:80%;
+    right:0rem;
+  }
+
+  #banner_text_div{
+    top:65%;
+  }
+}
+
+@media (max-width: 756px){
+  #banner_image_div{
+    height:35%;
+    right:0rem;
+  }
+
 }
 
 #klasse_tittel {
@@ -70,9 +81,8 @@
 }
 
 #body_div {
-  top: 20%;
   position: relative;
-  background-color: white;
+  background-color: #E9e7da;
   width: 100%;
   z-index: 100;
 }
@@ -94,9 +104,9 @@
 }
 
 #farge-div {
-  background-color: rgb(155, 68, 65);
+  background-color: #984843;
   height: 550px;
-  margin-top: 3rem;
+  //margin-top: 3rem;
 }
 
 #store-info-tittel {
@@ -131,10 +141,11 @@ li {
 
 .button {
   border: none;
-  background-color: rgb(155, 68, 65);;
+  background-color: #984843;
   color: white;
   font-size: 2rem;
   text-decoration: none;
+  text-align: left;
 }
 
 .button:hover {
@@ -167,4 +178,8 @@ li {
   position: absolute;
   bottom: -25px;
   left: 0px;
+}
+
+.outline-gold-hover:hover {
+  background-color: #CDA34F;
 }
