@@ -4,48 +4,31 @@
 
 //------//
 
-#banner_image_div {
-  width: 100%;
-  height: 80%;
-  overflow: hidden;
-  position: relative;
-  right: 0.95rem;
-  bottom: 1.05rem;
-  z-index: 100;
-}
-
 #campus_banner {
   width: 100%;
   min-height: 30%;
-  z-index: 99;
   position: fixed;
   filter: brightness(0.7);
   transform: scale(1.2);
 }
 
-#banner_text_div {
-  width: 100%;
-  position: relative;
-  top: 65%;
-  left: 15%;
-  z-index: 99;
-}
-
 @media (min-width: 756px){
-  #banner_image_div{
-    height:80%;
-    right:0rem;
+  #banner{
+    height:75%;
   }
 
-  #banner_text_div{
+  #banner_text{
     top:65%;
   }
 }
 
 @media (max-width: 756px){
-  #banner_image_div{
+  #banner{
     height:35%;
-    right:0rem;
+  }
+
+  #banner_text {
+    top: 35%;
   }
 
 }
@@ -82,9 +65,6 @@
 
 #body_div {
   position: relative;
-  background-color: #E9e7da;
-  width: 100%;
-  z-index: 100;
 }
 
 #info_tittel {

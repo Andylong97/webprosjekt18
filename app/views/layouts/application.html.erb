@@ -9,7 +9,7 @@
 </head>
 <body>
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top bakgrunn-gold border-bunn">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top background-daisy border-bunn">
   <div class="container-fluid">
     <a href="/index" id="logo_small">
       <%= render 'home/svg/logo_symbol_christiania' %>
@@ -26,16 +26,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link text-dark" href="/logistics"><%= t('planner') %> </a>
+          <a class="nav-link text-dark" href="/fjerdingen">Fjerdingen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="/fjerdingen">Fjerdingen</a>
+          <a class="nav-link text-dark" href="/kvadraturen">Kvadraturen</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-dark" href="/vulkan">Vulkan & Brennerivegen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-dark" href="/kvadraturen">Kvadraturen</a>
+          <a class="nav-link text-dark" href="/logistics"><%= t('planner') %> </a>
         </li>
         <%= render 'shared/change_locale' %>
       </ul>
@@ -45,13 +45,11 @@
 </nav>
 <div class="container-fluid-no-gutters logistic" style="height: 100%; width: 100%;">
   <%= yield %>
-  <footer class="footer" id="campus_footer">
+  <footer class="footer position-relative" id="campus_footer">
     <h1>Info</h1>
     <p>Denne nettsiden er ikke offisiell. Dette er et potensielt fremtidig studentverktøy for studenter ved Høyskolen
       Kristiania, laget i regi av Webprosjekt 2018.</p>
-
   </footer>
 </div>
-
 </body>
 </html>

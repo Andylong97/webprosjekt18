@@ -37,7 +37,7 @@ class GoogleMaps
 
   def city_bikes(coordinate)
     center = [coordinate[:long], coordinate[:lat]]
-    box = Geocoder::Calculations.bounding_box(center, 0.5)
+    box = Geocoder::Calculations.bounding_box(center, 0.2)
     uri = URI("http://reisapi.ruter.no/Place/GetCityBikeStations?longmin=#{box[0]}&longmax=#{box[2]}&latmin=#{box[1]}&latmax=#{box[3]}")
     {
       body: JSON.parse(Net::HTTP.get(uri)),
