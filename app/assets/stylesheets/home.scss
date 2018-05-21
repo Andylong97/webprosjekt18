@@ -12,6 +12,14 @@
   transform: scale(1.35);
 }
 
+#main_bannner {
+  width: 100%;
+  min-height: 30%;
+  position: absolute;
+  filter: brightness(0.7);
+  transform: scale(1.35);
+}
+
 @media (min-width: 756px){
   #banner{
     height:75%;
