@@ -1,73 +1,79 @@
 <!-- BANNER -->
-<div id="banner">
+<div id="mainBanner">
   <!-- BILDE HER -->
   <%= image_tag 'kvadraturen_banner.jpg', id: 'campus_banner' %>
   <!-- BANNER TEKST HER-->
   <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 pb-5 mb-5 text-light" id="banner_text">
     <h1>Høyskolen Kristiana</h1>
-    <p>Velkommen til studenthjelpern for alle som går her. Vi har ikke alltid like lett for å finne frem i stor by, også for oss som har gått her en stund!
-      For det er jo ikke alltid vi har nok tid til å utforske det som er rundt! Her er det perfekte verktøyet for deg som vil ha info om det som er rundt og
-    hvordan best komme seg immellom campusene!</p>
+    <p>Velkommen til studenthjelpern for alle som går her. Vi har ikke alltid like lett for å finne frem i stor by, også
+      for oss som har gått her en stund!
+      For det er jo ikke alltid vi har nok tid til å utforske det som er rundt! Her er det perfekte verktøyet for deg
+      som vil ha info om det som er rundt og
+      hvordan best komme seg immellom campusene!</p>
   </div>
 </div>
-<div class="container-fluid pl-md-5 pl-lg-5 pr-md-5 pr-lg-5 pt-5 position-relative" style="margin-top: 50px;">
-<div class="row col-md-12 col-lg-12 pl-md-6 pl-lg-6 text-light">
-  <div class="col-md-4 col-lg-4 pl-md-6 pl-lg-6 pl-lg-3 pl-md-3 pl-0">
-    <%= link_to image_tag('campus_fjerdingen.jpg', class: "rounded img-responsive mb-5", id: "campus"), '/fjerdingen' %>
-    <h5>Fjerdingen:</h5>
-  </div>
-  <div class="col-md-4 col-lg-4 pl-md-6 pl-lg-6 pl-lg-3 pl-md-3 pl-0">
-    <%= link_to image_tag('campus_kvadraturen.jpg', class: "rounded img-responsive mb-5", id: "campus"), '/kvadraturen' %>
-    <h5>Kvadraturen</h5>
-  </div>
-  <div class="col-md-4 col-lg-4 pl-md-6 pl-lg-6 pl-lg-3 pl-md-3 pl-0">
-    <%= link_to image_tag('campus_vulkan.jpg', class: "rounded img-responsive mb-5", id: "campus"), '/vulkan' %>
-    <h5>Vulkan & Brenneriveien</h5>
-  </div>
-</div>
+<div class="container-fluid mt-5 position-relative" style="margin-top: 50px;">
+  <div class="row  text-light mb-5">
+    <div class="col-md-4 col-lg-4 ">
+      <h5>Fjerdingen:</h5>
+      <%= link_to image_tag('campus_fjerdingen.jpg', class: "rounded img-responsive", id: "campus"), '/fjerdingen' %>
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <h5>Kvadraturen</h5>
+      <%= link_to image_tag('campus_kvadraturen.jpg', class: "rounded img-responsive", id: "campus"), '/kvadraturen' %>
+    </div>
+    <div class="col-md-4 col-lg-4">
+      <h5>Vulkan & Brenneriveien</h5>
+      <%= link_to image_tag('campus_vulkan.jpg', class: "rounded img-responsive", id: "campus"), '/vulkan' %>
 
-<!-- Info felles for campusene -->
-<div class="row background-daisy col-md-12 col-lg-12 pl-md-6 pl-lg-6 pl-md-3 pl-lg-3 pl-0"  style="margin-top: 50px;">
-    <div class="col-md-8 pl-5">
-    <h4>Kontakt informasjon:</h4>
-    <p>Felles sentralbord for all campus (kl. 08.00-15.30):<br>
-      Telefon: 22 05 75 50<br><br>
-      Åpningstider resepsjon:<br>
-      Mandag - fredag: 08.00-16.00<br><br>
-      Campus' åpningstider:<br>
-      Mandag - fredag: 16.00-00.00</p>
-    </div>
-</div>
-<!-- Student Tilbud -->
-<div class="row">
-  <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0 ml-md-5 ml-lf-5 m-0">
-    <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
-      <div><u>SiO Tilbud:</u></div>
-      <ul>
-        <li><a href="https://www.sio.no/helse/radgivning">Rådgivning</a></li>
-        <li><a href="https://www.sio.no/helse">Lege</a></li>
-        <li><a href="https://www.sio.no/helse/tannlege">Tannlege</a></li>
-      </ul>
     </div>
   </div>
-  <!-- delt i to -->
-  <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
-    <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
-      <div><u>Ukas' Mat tilbud:</u></div>
-      <ul>
-        <li><a href="https://www.rema.no/kampanjevarer">Rema 1000</a></li>
-        <li><a href="http://kundeavis.coop.no/aviser/prix/ost/?id=4306">Coop Prix</a></li>
-        <li><a href="http://kundeavisene.no/7-kiwi?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauT3efDxcWNqNg-UIFvUUzLIP_HqdN7sT9xuH-twHagFKb5CYH2OXo4aAnuYEALw_wcB">Kiwi</a></li>
-        <li><a href="https://meny.no/tilbud">Meny</a></li>
-      </ul>
+  <div class="background-daisy">
+    <!-- Info felles for campusene -->
+    <div class="row col-md-12 mt-5 col-lg-12 pl-md-5 pl-lg-5 pl-md-3 pl-lg-3 pl-0" style="margin-top: 50px;">
+      <div class="col-md-8 pl-5">
+        <h4>Kontakt informasjon:</h4>
+        <p>Felles sentralbord for all campus (kl. 08.00-15.30):<br>
+          Telefon: 22 05 75 50<br><br>
+          Åpningstider resepsjon:<br>
+          Mandag - fredag: 08.00-16.00<br><br>
+          Campus' åpningstider:<br>
+          Mandag - fredag: 16.00-00.00</p>
+      </div>
+    </div>
+    <!-- Student Tilbud -->
+    <div class="row p-1">
+      <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0 ml-md-5 ml-lf-5 m-0" style="margin-top: 50px;">
+        <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
+          <div><u>SiO Tilbud:</u></div>
+          <ul>
+            <li><a href="https://www.sio.no/helse/radgivning">Rådgivning</a></li>
+            <li><a href="https://www.sio.no/helse">Lege</a></li>
+            <li><a href="https://www.sio.no/helse/tannlege">Tannlege</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- delt i to -->
+      <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
+        <div class="card card-body background_red pl-md-5 pl-lg-5 pl-3">
+          <div><u>Ukas' Mat tilbud:</u></div>
+          <ul>
+            <li><a href="https://www.rema.no/kampanjevarer">Rema 1000</a></li>
+            <li><a href="http://kundeavis.coop.no/aviser/prix/ost/?id=4306">Coop Prix</a></li>
+            <li>
+              <a href="http://kundeavisene.no/7-kiwi?gclid=Cj0KCQjw_ZrXBRDXARIsAA8KauT3efDxcWNqNg-UIFvUUzLIP_HqdN7sT9xuH-twHagFKb5CYH2OXo4aAnuYEALw_wcB">Kiwi</a>
+            </li>
+            <li><a href="https://meny.no/tilbud">Meny</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row col-md-12 mt-5 col-lg-12 pl-md-5 pl-lg-5 pl-md-3 pl-lg-3 pl-0" style="margin-top: 50px;">
+      <div>
+        <h4>Mer informasjon på:</h4>
+        <a href="https://kristiania.no">Kristiana.no</a><br>
+        <a href="https://www.westerdals.no">Westerdals.no</a>
+      </div>
     </div>
   </div>
-</div>
-<div class="row background-daisy col-md-12 col-lg-12 pl-md-6 pl-lg-6 pl-3">
-  <div>
-    <h4>Mer informasjon på:</h4>
-  <a href="https://kristiania.no">Kristiana.no</a><br>
-  <a href="https://www.westerdals.no">Westerdals.no</a>
-  </div>
-</div>
 </div>
