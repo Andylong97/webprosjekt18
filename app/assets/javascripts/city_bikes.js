@@ -123,7 +123,7 @@ function campus() {
         zoom: 14
     });
     let campus = {
-        fjerdingen: { lat: 59.916114    , lng: 10.759968 },
+        fjerdingen: { lat: 59.916114, lng: 10.759968 },
         vulkan: { lat: 59.923312, lng: 10.752354 },
         brennerivegen: { lat: 59.920133, lng: 10.752595 },
         kvadraturen: { lat: 59.910980, lng: 10.745589 },

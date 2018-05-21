@@ -19,14 +19,20 @@ class HomeController < ApplicationController
     @all = Location.all
   end
 
-  def fjerdingen; end
+  def fjerdingen
+    @bikes = GoogleMaps.new(params).city_bikes({ lat: 59.916114, long: 10.759968 })
+    @campus = 'Fjerdingen'
+  end
 
   def kvadraturen
     @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
     @campus = 'Kvadraturen'
   end
 
-  def vulkan; end
+  def vulkan
+    @bikes = GoogleMaps.new(params).city_bikes({ lat: 59.923312, long: 10.752354 })
+    @campus = 'Vulkan'
+  end
 
   def change_locale
     locale = params[:id]
@@ -40,7 +46,6 @@ class HomeController < ApplicationController
   end
 
   def set_location
-    raise params[:latlong].inspect
     session[:latlong] = params[:latlong]
   end
 end

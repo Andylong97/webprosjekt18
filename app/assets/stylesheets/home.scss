@@ -15,9 +15,9 @@
 #main_bannner {
   width: 100%;
   min-height: 30%;
-  position: absolute;
+  position: fixed;
   filter: brightness(0.7);
-  transform: scale(1.35);
+  transform: scale(0.9);
 }
 
 @media (min-width: 756px){
