@@ -6,9 +6,10 @@ nb:
   from: "Fra"
   to: "Til"
   between: "mellom"
+  available_bikes: "ledige sykler"
   logistics:
-    my_location: "min posisjon"
     travel: "Reis"
+    my_location: "min posisjon"
     route: "Rute"
     departure: "Avgang"
     arrival: "Ankomst"

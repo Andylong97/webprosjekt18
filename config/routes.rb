@@ -6,10 +6,6 @@ Rails.application.routes.draw do
 
   post '/index', to: 'home#index'
 
-  get '/brenneriveien', to: 'home#brenneriveien'
-
-  post '/brenneriveien', to: 'home#brenneriveien'
-
   get '/fjerdingen', to: 'home#fjerdingen'
 
   post '/fjerdingen', to: 'home#fjerdingen'
@@ -29,8 +25,6 @@ Rails.application.routes.draw do
   get '/route_info', to: 'home#route_info'
 
   post '/route_info', to: 'home#route_info'
-
-  get '/test', to: 'home#kvadraturenalt'
 
   get '/locale', to: 'home#change_locale'
 
