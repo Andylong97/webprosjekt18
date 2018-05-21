@@ -1,0 +1,87 @@
+<!-- BANNER -->
+<div id="banner">
+  <!-- BILDE HER -->
+  <%= image_tag 'kvadraturen_banner.jpg', id: 'campus_banner' %>
+  <!-- BANNER TEKST HER-->
+  <div class="col-md-6 col-lg-6 pl-md-5 pl-lg-5 pl-3 text-light" id="banner_text">
+    <h1 id="klasse_tittel">Campus</h1>
+    <h2 id="campus_tittel">Kvadraturen</h2>
+  </div>
+</div>
+<div class="container-fluid pl-5 pr-5 pt-5 position-relative background-daisy">
+  <!-- GENERELL INFO -->
+  <div class="row pb-md-3 pb-lg-3">
+    <div class="col-md-4 col-lg-4 col-12">
+      <h2><%= t('opening_hours').capitalize %></h2>
+      <p>Man–fre: 07.30 – 23.00<br>
+        Lør–søn: 09.00 – 17.00</p>
+    </div>
+
+    <div class="col-md-4 col-lg-4 col-12">
+      <h2>Ansatte</h2>
+      <p class="pt-2">
+        Man–fre: 08.00 – 16.00</p>
+    </div>
+
+    <div class="col-md-4 col-lg-4 col-12">
+      <h2>Adresse</h2>
+      <p>Kirkegata 24-26<br>0153 Oslo<br>Norge</p>
+    </div>
+  </div>
+  <!-- NÆR INFORMASJON -->
+  <div class="row">
+    <div class="col-md-4 col-lg-4 card col-12 background_red mr-md-5 mr-lg-5 text-light p-0">
+      <div class="card card-header">
+        <h2><u>Nærområdet:</u></h2>
+      </div>
+      <div class="card card-body background_red">
+        <div>Matbutikker</div>
+        <ul>
+          <li>Matkroken (Steen &amp; Strøm)</li>
+          <li>Coop Prix (Oslo S)</li>
+          <li>Joker (Oslo S)</li>
+          <li>Kiwi (Byporten)</li>
+        </ul>
+      </div>
+      <div class="card card-body background_red">
+        <div >Spisesteder</div>
+        <ul>
+          <li>Steen &amp; Strøm</li>
+          <li>Østbanehallen</li>
+        </ul>
+      </div>
+      <div class="card card-body background_red">
+        <div>Hurtigmat</div>
+        <ul>
+          <li>Burger King</li>
+          <li>Peppes Pizza</li>
+          <li>Subway</li>
+        </ul>
+      </div>
+    </div>
+    <!-- KART -->
+    <div class="col-md-6 col-lg-6 col-12 ml-md-5 ml-lg-5 card background_red">
+      <%= render 'home/campus_map' %>
+    </div>
+  </div>
+  <!-- PRAKTISK INFO -->
+  <div class="row pt-5 pb-3">
+    <div class="col-md-4 col-lg-4 col-12">
+      <h1>Auditorium</h1>
+      <p>Info</p>
+    </div>
+
+    <div class="col-md-4 col-lg-4 col-12">
+      <h1>Studentkro</h1>
+      <p>Info</p>
+    </div>
+
+    <div class="col-md-4 col-lg-4 col-12">
+      <h1>Bokhandel</h1>
+      <p>Info</p>
+    </div>
+  </div>
+</div> <!-- END BODY DIV -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeuhvsD4Oh7u3UNHNmrdtLvlDpdg1uygE&libraries=places&callback=campus"
+        async defer></script>
