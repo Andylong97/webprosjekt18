@@ -1,6 +1,6 @@
 <div class="row">
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-4" onclick="city_bikes(<%= @bikes[:center][1] %>,<%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>);">By-sykkel</div>
-  <div class="btn p-4 text-light border-dark outline-gold-hover col-4" onclick="places(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>);">Cafe</div>
+  <div class="btn p-4 text-light border-dark outline-gold-hover col-4" onclick="city_bikes(<%= @bikes[:center][1] %>,<%= @bikes[:center][0] %>,<%= @bikes[:body].to_json %>,'<%= t('available_bikes').capitalize %>', '<%= "Campus #{@campus}" %>');">By-sykkel</div>
+  <div class="btn p-4 text-light border-dark outline-gold-hover col-4" onclick="places(<%= @bikes[:center][1] %>, <%= @bikes[:center][0] %>, '<%= "Campus #{@campus}" %>');">Cafe</div>
   <div class="btn p-4 text-light border-dark outline-gold-hover col-4" onclick="campus()">Campus</div>
 </div>
 <div class="row" style="height: 100%">

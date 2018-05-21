@@ -6,6 +6,7 @@ en:
   from: "from"
   to: "to"
   between: "between"
+  available_bikes: "available bikes"
   logistics:
     travel: "travel"
     my_location: "my location"

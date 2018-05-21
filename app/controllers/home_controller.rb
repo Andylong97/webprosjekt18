@@ -19,19 +19,14 @@ class HomeController < ApplicationController
     @all = Location.all
   end
 
-  def brenneriveien; end
-
   def fjerdingen; end
 
   def kvadraturen
     @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
+    @campus = 'Kvadraturen'
   end
 
   def vulkan; end
-
-  def kvadraturenalt
-    @bikes = GoogleMaps.new(params).city_bikes({lat: 59.9111398, long: 10.7450366})
-  end
 
   def change_locale
     locale = params[:id]
