@@ -13,7 +13,7 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  url: mysql2://user:password@127.0.0.1
+  url: mysql2://andy:eplekake@127.0.0.1
 
 development:
   <<: *default
